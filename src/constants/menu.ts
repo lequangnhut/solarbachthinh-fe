@@ -2,28 +2,34 @@ import { Bolt, BookText, FileCogIcon, FolderGit2, House, UserRoundCog } from 'lu
 
 export const NAV_MENU = [
   {
-    name: 'overview',
+    name: 'Trang chủ',
     link: '#overview',
+    isDropdown: false,
   },
   {
-    name: 'skills',
+    name: 'Giới thiệu',
     link: '#skills',
+    isDropdown: false,
   },
   {
-    name: 'projects',
+    name: 'Sản phẩm',
     link: '#projects',
+    isDropdown: false,
   },
   {
-    name: 'aboutMe',
+    name: 'Dự án',
     link: '#about-me',
+    isDropdown: false,
   },
   {
-    name: 'contact',
+    name: 'Dịch vụ',
     link: '#contact',
+    isDropdown: false,
   },
   {
-    name: 'theEnd',
-    link: '#the-end',
+    name: 'Liên hệ',
+    link: '#contact',
+    isDropdown: false,
   },
 ];
 

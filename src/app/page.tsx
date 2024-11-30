@@ -1,5 +1,3 @@
-'use client';
-
 import MainContentLayout from '@/components/layouts/MainContentLayout';
 
 export default function Home() {

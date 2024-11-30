@@ -1,61 +1,68 @@
 import type { Config } from 'tailwindcss';
 
-const config: Config = {
+const config = {
+  darkMode: ['class'],
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
   ],
-  darkMode: 'class',
+  prefix: '',
   theme: {
     fontFamily: {
-      inter: ['"HarmonyOS Sans"', 'sans-serif'],
+      roboto: ['var(--font-roboto)', 'sans-serif'],
+      lenxendDeca: ['var(--font-lexend-deca)', 'sans-serif'],
+      museoModerno: ['var(--font-museo-moderno)', 'sans-serif'],
+    },
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
     },
     extend: {
       colors: {
-        whiteBase: '#FFFFFF',
-        grayBase: '#ebedf1',
-        gray600: '#8c8c8c',
-        gray500: '#afafaf',
-        gray400: '#f7f8fa',
-        gray300: '#f6f7f8',
-        grayBlue400: '#87909f',
-        yellowBase: '#FCD535',
-        orangeBase: '#F97316',
-        blackBase: '#0d0e0f',
-        blueBase: '#0066FF',
-        greenBase: '#1DC167',
-        green500: '#d9f2eb',
-        redBase: '#FF5B42',
-        red500: '#ffe7ea',
-        purpleBase: '#8f4cee',
-        black400: '#222429',
-        grayDarkest: '#323436',
-        grayDark: '#65686C',
-        blue100: '#CCE8FF',
-        blue200: '#99CEFF',
-        blue300: '#66AFFF',
-        blue900: '#001D7A',
-        greenDark: '#0E8A5F',
-        redDark: '#B72125',
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        primary: {
+          DEFAULT: 'var(--primary)',
+          bold: 'var(--primary-bold)',
+          foreground: 'hsl(var(--primary-foreground))',
+        },
+        secondary: {
+          DEFAULT: 'var(--secondary)',
+          foreground: 'hsl(var(--secondary-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
+        },
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
       },
-      backgroundColor: {
-        darkBase: '#0d0e0f',
-        dark300: '#25272c',
-        dark400: '#141414',
-        dark500: '#171721',
-        dark600: '#111214',
-        dark700: '#0a0a0a',
-      },
-      backgroundSize: {
-        full: '100%',
-      },
-      borderColor: {
-        whiteBase: '#FFFFFF',
-        blackBase: '#0d0e0f',
-        black400: '#222429',
-        bgray500: '#e4e6e8',
-        bgray400: '#292b2e',
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
       },
       keyframes: {
         'accordion-down': {
@@ -66,21 +73,14 @@ const config: Config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
-        slideX: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-100%)' },
-        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        slideX: 'slideX 150s linear infinite',
       },
-    },
-    container: {
-      center: true,
     },
   },
   plugins: [require('tailwindcss-animate')],
-};
+} satisfies Config;
+
 export default config;

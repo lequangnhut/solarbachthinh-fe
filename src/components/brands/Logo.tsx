@@ -13,7 +13,7 @@ const MainLogo = () => {
   }
 
   return (
-    <div className="font-extrabold text-blackBase dark:text-whiteBase">
+    <div className="font-extrabold">
       <Link href="/">
         <Image src="logo.png" alt="logo" width={36} height={36} />
       </Link>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Roboto, Lexend_Deca, MuseoModerno } from 'next/font/google';
+import { Roboto, Open_Sans } from 'next/font/google';
 
 import '../styles/index.scss';
 import { cn } from '@/utils';
@@ -12,17 +12,11 @@ const roboto = Roboto({
   weight: ['100', '300', '400', '500', '700', '900'],
   variable: '--font-roboto',
 });
-const lexendDeca = Lexend_Deca({
+
+const openSans = Open_Sans({
   subsets: ['latin', 'vietnamese'],
-  style: ['normal'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-lexend-deca',
-});
-const museoModerno = MuseoModerno({
-  subsets: ['latin', 'vietnamese'],
-  style: ['normal', 'italic'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-museo-moderno',
+  weight: ['400', '500'],
+  variable: '--font-open-sans',
 });
 
 export const metadata: Metadata = {
@@ -42,6 +36,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: `/assets/icons/logo.png`,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -49,12 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
-        className={cn(
-          'bg-background min-h-screen antialiased',
-          roboto.variable,
-          lexendDeca.variable,
-          museoModerno.variable,
-        )}
+        className={cn('min-h-screen bg-background antialiased', roboto.variable, openSans.variable)}
       >
         <StoreProvider>
           <Toaster />
