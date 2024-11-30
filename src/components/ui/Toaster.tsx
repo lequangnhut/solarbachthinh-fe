@@ -54,7 +54,7 @@ export function Toaster() {
             </div>
             {action}
             {!isHideCloseToast && (
-              <ToastClose className="text-whiteBase/50 opacity-100 hover:text-whiteBase dark:text-blackBase/50 dark:hover:text-blackBase" />
+              <ToastClose className="text-whiteBase/50 hover:text-whiteBase dark:text-blackBase/50 dark:hover:text-blackBase opacity-100" />
             )}
           </Toast>
         );

@@ -1,24 +1,39 @@
 import Link from 'next/link';
-import { MOBILE_NAV_MENU } from '@/constants/menu';
-import { cn } from '@/utils';
+import { Menu } from 'lucide-react';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/Sheet';
+import MobileUserBox from './MobileUserBox';
+import MobileLogoutButton from './MobileLogoutButton';
 
-const HeaderMobile = () => {
+const NavbarDesktop = () => {
   return (
-    <div className="fixed bottom-7 left-1/2 z-[100] flex translate-x-[-50%] gap-2 rounded-[99px] border-[2px] border-solid border-orangeBase bg-black/40 px-4 py-2 text-[14px] text-white transition-colors dark:bg-gray-900/40 dark:text-gray-200 sm:px-8 sm:text-[22px] md:hidden">
-      {MOBILE_NAV_MENU.map((navItem, index) => (
+    <nav className="sticky top-0 z-50 bg-white">
+      <div className="flex items-center justify-between pl-4 shadow-md">
         <Link
-          key={index}
-          href={navItem.link}
-          className={cn(
-            'flex items-center justify-center rounded-full bg-transparent p-3 transition-colors hover:bg-orangeBase',
-            navItem.link === '#overview' ? 'active bg-orangeBase' : 'text-current',
-          )}
+          href="/"
+          className="flex h-[72px] items-center border-r border-solid border-gray-300 pr-4"
         >
-          <navItem.icon className="h-4 w-4" />
+          <h2 className="m-0 text-2xl font-bold uppercase text-primary">Bách Thịnh</h2>
         </Link>
-      ))}
-    </div>
+
+        <div className="mr-7 block rounded-md border border-solid border-gray-400 p-2 px-3.5">
+          <Sheet>
+            <SheetTrigger asChild>
+              <span className="text-blackBase cursor-pointer">
+                <Menu width={22} height={22} />
+              </span>
+            </SheetTrigger>
+            <SheetContent className="overflow-y-auto">
+              <div className="mt-4 flex flex-col gap-6 pt-4">
+                <MobileUserBox />
+                <div className="border-t-[1px] border-solid border-slate-300"></div>
+                <MobileLogoutButton />
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
+    </nav>
   );
 };
 
-export default HeaderMobile;
+export default NavbarDesktop;

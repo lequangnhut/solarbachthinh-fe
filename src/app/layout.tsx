@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import { Roboto, Lexend_Deca, MuseoModerno } from 'next/font/google';
+import { Roboto, Open_Sans } from 'next/font/google';
 
 import '../styles/index.scss';
 import { cn } from '@/utils';
 import { Toaster } from '@/components/ui/Toaster';
 import StoreProvider from '@/providers/StoreProvider';
+import InitData from '@/components/commons/InitData';
 
 const roboto = Roboto({
   subsets: ['latin', 'vietnamese'],
@@ -12,23 +13,17 @@ const roboto = Roboto({
   weight: ['100', '300', '400', '500', '700', '900'],
   variable: '--font-roboto',
 });
-const lexendDeca = Lexend_Deca({
+
+const openSans = Open_Sans({
   subsets: ['latin', 'vietnamese'],
-  style: ['normal'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-lexend-deca',
-});
-const museoModerno = MuseoModerno({
-  subsets: ['latin', 'vietnamese'],
-  style: ['normal', 'italic'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-museo-moderno',
+  weight: ['400', '500'],
+  variable: '--font-open-sans',
 });
 
 export const metadata: Metadata = {
   title: 'Solar Bách Thịnh',
   description:
-    'Welcome to our pet rescue website! We are dedicated to finding loving homes for animals in need. Browse our available pets and help us make a difference in their lives.',
+    'Solar Bách Thịnh là một thương hiệu hàng đầu chuyên cung cấp và phân phối các thiết bị điện năng lượng mặt trời chất lượng cao. Với mục tiêu mang đến giải pháp năng lượng sạch và bền vững cho mọi gia đình và doanh nghiệp, chúng tôi cung cấp các sản phẩm như pin mặt trời, inverter, bộ điều khiển sạc, hệ thống điện năng lượng mặt trời trọn gói và các thiết bị liên quan khác.',
   robots: {
     index: false,
     follow: true,
@@ -42,6 +37,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: `/assets/icons/Logo.png`,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -49,14 +45,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
-        className={cn(
-          'bg-background min-h-screen antialiased',
-          roboto.variable,
-          lexendDeca.variable,
-          museoModerno.variable,
-        )}
+        className={cn('min-h-screen bg-background antialiased', roboto.variable, openSans.variable)}
       >
         <StoreProvider>
+          <InitData />
           <Toaster />
           {children}
         </StoreProvider>

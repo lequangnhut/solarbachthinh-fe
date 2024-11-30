@@ -18,6 +18,17 @@ export const formatPhoneNumber = (phoneNumber: string, countryCode: string = '+8
     : phoneNumber;
 };
 
+export const formatHiddenEmail = (email: string) => {
+  email = email.trim();
+  if (email === '') return '';
+  let [username] = email.split('@');
+  const domain = email.split('@')[1];
+  if (username.length > 3) {
+    username = username.slice(0, 3) + '***' + username.slice(6, username.length);
+  }
+  return `${username}@${domain}`;
+};
+
 export const formatUrl = (url: string): string => {
   try {
     const { hostname, pathname } = new URL(url);
