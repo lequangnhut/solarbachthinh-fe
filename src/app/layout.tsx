@@ -5,6 +5,7 @@ import '../styles/index.scss';
 import { cn } from '@/utils';
 import { Toaster } from '@/components/ui/Toaster';
 import StoreProvider from '@/providers/StoreProvider';
+import InitData from '@/components/commons/InitData';
 
 const roboto = Roboto({
   subsets: ['latin', 'vietnamese'],
@@ -22,7 +23,7 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: 'Solar Bách Thịnh',
   description:
-    'Welcome to our pet rescue website! We are dedicated to finding loving homes for animals in need. Browse our available pets and help us make a difference in their lives.',
+    'Solar Bách Thịnh là một thương hiệu hàng đầu chuyên cung cấp và phân phối các thiết bị điện năng lượng mặt trời chất lượng cao. Với mục tiêu mang đến giải pháp năng lượng sạch và bền vững cho mọi gia đình và doanh nghiệp, chúng tôi cung cấp các sản phẩm như pin mặt trời, inverter, bộ điều khiển sạc, hệ thống điện năng lượng mặt trời trọn gói và các thiết bị liên quan khác.',
   robots: {
     index: false,
     follow: true,
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  icons: `/assets/icons/logo.png`,
+  icons: `/assets/icons/Logo.png`,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         className={cn('min-h-screen bg-background antialiased', roboto.variable, openSans.variable)}
       >
         <StoreProvider>
+          <InitData />
           <Toaster />
           {children}
         </StoreProvider>
