@@ -12,7 +12,7 @@ const VerifyEmail = () => {
       <div className="p-3">
         <div className="flex w-full justify-center">
           <Image
-            src="/assets/icons/Logo.png"
+            src="/assets/icons/logo.png"
             alt="logo"
             width={100}
             height={100}

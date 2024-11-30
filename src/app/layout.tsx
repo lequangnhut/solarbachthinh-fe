@@ -37,7 +37,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  icons: `/assets/icons/Logo.png`,
+  icons: `/assets/icons/logo.png`,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
