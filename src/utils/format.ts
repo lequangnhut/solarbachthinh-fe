@@ -24,7 +24,7 @@ export const formatHiddenEmail = (email: string) => {
   let [username] = email.split('@');
   const domain = email.split('@')[1];
   if (username.length > 3) {
-    username = username.slice(0, 3) + '***' + username.slice(6, username.length);
+    username = username.slice(0, 3) + '***' + username.slice(12, username.length);
   }
   return `${username}@${domain}`;
 };

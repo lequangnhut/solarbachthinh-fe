@@ -9,6 +9,7 @@ import { Swiper as SwiperClass } from 'swiper';
 import { setHomeProps } from '@/reduxs/HomeSlice';
 import { Navigation, Autoplay } from 'swiper/modules';
 import { useAppDispatch, useAppSelector } from '@/hooks/store';
+import { Button } from '@/components/ui/Button';
 
 const HomeCarousel = () => {
   const dispatch = useAppDispatch();
@@ -77,9 +78,9 @@ const HomeCarousel = () => {
               {slide.title}
             </h1>
             <p className="mb-6 w-2/3 text-white md:text-2xl">{slide.description}</p>
-            <button className="rounded-full bg-primary px-9 py-3 text-white hover:bg-primary-bold">
+            <Button className="rounded-full bg-primary px-9 py-3 text-white hover:bg-primary-bold">
               Đọc thêm
-            </button>
+            </Button>
           </div>
         </SwiperSlide>
       ))}

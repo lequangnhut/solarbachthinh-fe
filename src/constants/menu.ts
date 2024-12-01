@@ -65,3 +65,14 @@ export const MOBILE_NAV_MENU = [
     url: '/contact',
   },
 ];
+
+export const USER_ARRAY_MENU = [
+  {
+    title: 'Tổng quan',
+    href: '/',
+  },
+  {
+    title: 'Lịch sử mua hàng',
+    href: '/',
+  },
+];

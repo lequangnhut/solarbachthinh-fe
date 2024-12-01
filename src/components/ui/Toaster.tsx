@@ -23,12 +23,12 @@ export function Toaster() {
     <ToastProvider duration={TOAST_DURATION}>
       {toasts.map(({ id, title, description, action, status, isHideCloseToast, ...props }) => {
         const iconMap = {
-          success: <CircleCheck width={28} height={28} className="text-greenBase" />,
-          error: <CircleX width={28} height={28} className="text-redBase" />,
-          info: <Info width={28} height={28} className="text-blueBase" />,
+          success: <CircleCheck width={28} height={28} className="text-green-500" />,
+          error: <CircleX width={28} height={28} className="text-red-500" />,
+          info: <Info width={28} height={28} className="text-blue-500" />,
           message: (
             <div className="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-[#232527]">
-              <MessageSquare width={20} height={20} className="text-whiteBase" />
+              <MessageSquare width={20} height={20} className="text-white" />
             </div>
           ),
         };
@@ -54,7 +54,7 @@ export function Toaster() {
             </div>
             {action}
             {!isHideCloseToast && (
-              <ToastClose className="text-whiteBase/50 hover:text-whiteBase dark:text-blackBase/50 dark:hover:text-blackBase opacity-100" />
+              <ToastClose className="text-white/50 opacity-100 hover:text-white" />
             )}
           </Toast>
         );
