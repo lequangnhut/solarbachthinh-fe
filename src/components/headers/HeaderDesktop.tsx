@@ -1,8 +1,14 @@
-import Link from 'next/link';
-import { NAV_MENU } from '@/constants/menu';
-import NavbarDesktopBtn from './tools/NavbarDesktopBtn';
+'use client';
 
-const NavbarDesktop = () => {
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { cn } from '@/utils';
+import { NAV_MENU } from '@/constants/menu';
+import HeaderDesktopBtn from './tools/HeaderDesktopBtn';
+
+const HeaderDesktop = () => {
+  const pathname = usePathname();
+
   return (
     <nav className="sticky top-0 z-50 bg-white">
       <div className="flex items-center justify-between pl-4 shadow-md">
@@ -14,21 +20,24 @@ const NavbarDesktop = () => {
         </Link>
 
         <div className="mr-8 flex-grow items-center justify-end space-x-7 font-semibold lg:flex">
-          {NAV_MENU.map((item, key) => (
+          {NAV_MENU.map((navItem, key) => (
             <Link
-              href={item.link}
-              className="py-2 text-gray-700 transition hover:text-primary"
+              href={navItem.link}
+              className={cn(
+                'py-2 text-gray-700 transition hover:text-primary',
+                pathname === navItem.link && 'font-bold text-primary',
+              )}
               key={key}
             >
-              {item.name}
+              {navItem.name}
             </Link>
           ))}
         </div>
 
-        <NavbarDesktopBtn />
+        <HeaderDesktopBtn />
       </div>
     </nav>
   );
 };
 
-export default NavbarDesktop;
+export default HeaderDesktop;

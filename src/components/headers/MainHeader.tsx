@@ -1,5 +1,5 @@
-import HeaderMobile from './mobiles/HeaderMobile';
-import NavbarDesktop from './NavbarDesktop';
+import HeaderDesktopBtn from './HeaderDesktop';
+import MobileMainHeader from './mobiles/MobileMainHeader';
 import TopBarHeader from './tools/TopBarHeader';
 
 const MainHeader = () => {
@@ -7,11 +7,11 @@ const MainHeader = () => {
     <>
       <div className="hidden xl:block">
         <TopBarHeader />
-        <NavbarDesktop />
+        <HeaderDesktopBtn />
       </div>
 
       <div className="block xl:hidden">
-        <HeaderMobile />
+        <MobileMainHeader />
       </div>
     </>
   );

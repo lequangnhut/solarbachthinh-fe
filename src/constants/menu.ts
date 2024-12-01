@@ -1,4 +1,4 @@
-import { Bolt, BookText, FileCogIcon, FolderGit2, House, UserRoundCog } from 'lucide-react';
+import { Atom, BatteryCharging, Contact, House, Info, ShoppingBasket } from 'lucide-react';
 
 export const NAV_MENU = [
   {
@@ -8,54 +8,60 @@ export const NAV_MENU = [
   },
   {
     name: 'Giới thiệu',
-    link: '/',
+    link: '/about',
     isDropdown: false,
   },
   {
     name: 'Sản phẩm',
-    link: '/',
+    link: '/products',
     isDropdown: false,
   },
   {
     name: 'Dự án',
-    link: '/',
+    link: '/project',
     isDropdown: false,
   },
   {
     name: 'Dịch vụ',
-    link: '/',
+    link: '/services',
     isDropdown: false,
   },
   {
     name: 'Liên hệ',
-    link: '/',
+    link: '/contact',
     isDropdown: false,
   },
 ];
 
 export const MOBILE_NAV_MENU = [
   {
-    link: '#overview',
     icon: House,
+    title: 'Trang chủ',
+    url: '/',
   },
   {
-    link: '#skills',
-    icon: BookText,
+    icon: Info,
+    title: 'Giới thiệu',
+    url: '/about',
   },
   {
-    link: '#project',
-    icon: FolderGit2,
+    icon: ShoppingBasket,
+    title: 'Sản phẩm',
+    url: '/products',
   },
   {
-    link: '#about-me',
-    icon: UserRoundCog,
+    icon: Atom,
+    title: 'Dự án',
+    url: '/projects',
   },
   {
-    link: '#contact',
-    icon: FileCogIcon,
+    icon: BatteryCharging,
+    title: 'Dịch vụ',
+    url: '/services',
   },
   {
-    link: '#the-end',
-    icon: Bolt,
+    icon: Contact,
+    title: 'Liên hệ',
+    url: '/contact',
   },
 ];

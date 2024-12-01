@@ -1,13 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { isProduction } from '@/utils';
 import { toast } from '@/components/ui/use-toast';
 
 export const useHandleCopy = (): [(text: string) => void, boolean] => {
   const [isCopied, setIsCopied] = useState(false);
-  const { t } = useTranslation();
 
   const handleCopy = (text: string) => {
     if (navigator.clipboard) {
@@ -18,16 +16,16 @@ export const useHandleCopy = (): [(text: string) => void, boolean] => {
           toast({
             status: 'success',
             duration: 2000,
-            description: t('toasts.copiedSuccess'),
+            description: 'Sao chép thành công',
           });
         })
         .catch((error) => {
           if (!isProduction) console.error('Lỗi khi sao chép vào clipboard:', error);
           toast({
-            title: t('toasts.error'),
+            title: 'Lỗi',
             variant: 'destructive',
             duration: 2000,
-            description: t('toasts.copyFailed'),
+            description: 'Sao chép thất bại',
           });
         })
         .finally(() => {
@@ -36,9 +34,9 @@ export const useHandleCopy = (): [(text: string) => void, boolean] => {
     } else {
       if (!isProduction) console.warn('Trình duyệt không hỗ trợ Clipboard API');
       toast({
-        title: t('toasts.warning'),
+        title: 'Cảnh báo',
         duration: 2000,
-        description: t('toasts.clipboardNotSupported'),
+        description: 'Trình duyệt của bạn không hỗ trợ sao chép',
       });
     }
   };

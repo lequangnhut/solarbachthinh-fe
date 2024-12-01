@@ -13,6 +13,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import RegisterSlice from './RegisterSlice';
 import LoginSlice from './LoginSlice';
 import UserSlice from './UserSlice';
+import HomeSlice from './HomeSlice';
 
 const persistConfig = {
   key: 'root',
@@ -23,6 +24,7 @@ const rootReducer = combineReducers({
   register: RegisterSlice,
   login: LoginSlice,
   user: UserSlice,
+  home: HomeSlice,
 });
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 

@@ -122,7 +122,7 @@ const LoginForm = () => {
                 name="email"
                 placeholder="Vui lòng nhập email"
                 className={cn(
-                  'rounded-lg border-0 !border-black !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0 lg:border',
+                  'rounded-lg border !border-black !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
                   errorMsg.email && '!border-red-500',
                 )}
                 value={value.email}
@@ -142,7 +142,7 @@ const LoginForm = () => {
                 name="password"
                 placeholder="Vui lòng nhập mật khẩu"
                 className={cn(
-                  'rounded-lg border-0 !border-black !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0 lg:border',
+                  'rounded-lg border !border-black !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
                   errorMsg.password && '!border-red-500',
                 )}
                 value={value.password}

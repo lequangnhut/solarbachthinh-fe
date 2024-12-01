@@ -65,7 +65,7 @@ const RegisterFormItem = () => {
             name="email"
             placeholder="Vui lòng nhập email"
             className={cn(
-              'rounded-lg border-0 !border-black !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0 lg:border',
+              'rounded-lg border !border-black !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
               errorMsg.email && '!border-red-500',
             )}
             value={value.email}
@@ -85,7 +85,7 @@ const RegisterFormItem = () => {
             name="fullName"
             placeholder="Vui lòng nhập họ và tên"
             className={cn(
-              'rounded-lg border-0 !border-black !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0 lg:border',
+              'rounded-lg border !border-black !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
               errorMsg.fullName && '!border-red-500',
             )}
             value={value.fullName}
@@ -105,7 +105,7 @@ const RegisterFormItem = () => {
             name="phoneNumber"
             placeholder="Vui lòng nhập số điện thoại"
             className={cn(
-              'rounded-lg border-0 !border-black !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0 lg:border',
+              'rounded-lg border !border-black !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
               errorMsg.phoneNumber && '!border-red-500',
             )}
             value={value.phoneNumber}
@@ -125,7 +125,7 @@ const RegisterFormItem = () => {
             name="password"
             placeholder="Vui lòng nhập mật khẩu"
             className={cn(
-              'rounded-lg border-0 !border-black !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0 lg:border',
+              'rounded-lg border !border-black !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
               errorMsg.password && '!border-red-500',
             )}
             value={value.password}
@@ -145,7 +145,7 @@ const RegisterFormItem = () => {
             name="confirmPassword"
             placeholder="Vui lòng nhập nhập lại mật khẩu"
             className={cn(
-              'rounded-lg border-0 !border-black !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0 lg:border',
+              'rounded-lg border !border-black !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
               errorMsg.confirmPassword && '!border-red-500',
             )}
             value={value.confirmPassword}
