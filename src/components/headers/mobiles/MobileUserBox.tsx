@@ -3,7 +3,7 @@ import { NAV_MENU } from '@/constants/menu';
 
 const MobileUserBox = () => {
   return (
-    <div className="border-bgray500 block border-solid lg:hidden">
+    <div className="block border-solid border-b-gray-500 lg:hidden">
       <div className="text-black">
         {NAV_MENU.map((navItem, index) => (
           <Link

@@ -2,15 +2,15 @@ import { Mail, MapPinIcon, Phone } from 'lucide-react';
 
 export const NAV_FOOTER_ADDRESS = [
   {
-    name: '123 Street, New York, USA',
+    name: 'TT.Núi Sập, Thoại Sơn, An Giang',
     icon: MapPinIcon,
   },
   {
-    name: '+012 345 67890',
+    name: '+84 918.619.651',
     icon: Phone,
   },
   {
-    name: 'info@example.com',
+    name: 'lethanhkietdl@gmail.com',
     icon: Mail,
   },
 ];
@@ -22,19 +22,19 @@ export const NAV_FOOTER_LINK = [
   },
   {
     name: 'Sản phẩm',
-    link: '',
+    link: '/products',
   },
   {
     name: 'Dự án',
-    link: '',
+    link: '/projects',
   },
   {
     name: 'Dịch vụ',
-    link: '',
+    link: '/services',
   },
   {
     name: 'Liên hệ',
-    link: '',
+    link: '/contact',
   },
 ];
 

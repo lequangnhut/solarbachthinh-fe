@@ -18,7 +18,7 @@ export const NAV_MENU = [
   },
   {
     name: 'Dự án',
-    link: '/project',
+    link: '/projects',
     isDropdown: false,
   },
   {

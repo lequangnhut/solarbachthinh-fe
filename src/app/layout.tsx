@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import NextTopLoader from 'nextjs-toploader';
 import { Roboto, Open_Sans } from 'next/font/google';
 
 import '../styles/index.scss';
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body
         className={cn('min-h-screen bg-background antialiased', roboto.variable, openSans.variable)}
       >
+        <NextTopLoader color="#32C36C" showSpinner={false} />
         <StoreProvider>
           <InitData />
           <Toaster />
