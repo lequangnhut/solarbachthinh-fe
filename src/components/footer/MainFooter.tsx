@@ -1,7 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronRight, FacebookIcon, LinkedinIcon, TwitterIcon, YoutubeIcon } from 'lucide-react';
-import { NAV_FOOTER_ADDRESS, NAV_FOOTER_LINK, NAV_FOOTER_PROJECT } from '@/constants/footer';
+import {
+  NAV_FOOTER_ADDRESS,
+  NAV_FOOTER_BRANDS,
+  NAV_FOOTER_LINK,
+  NAV_FOOTER_PROJECT,
+} from '@/constants/footer';
 
 const MainFooter = () => {
   return (
@@ -67,10 +72,10 @@ const MainFooter = () => {
           <div>
             <h5 className="mb-4 text-xl font-bold text-white">Thương hiệu hợp tác</h5>
             <div className="grid grid-cols-3 gap-2">
-              {NAV_FOOTER_PROJECT.map((item, key) => (
+              {NAV_FOOTER_BRANDS.map((item, key) => (
                 <div key={key}>
                   <Image
-                    className="w-full rounded"
+                    className="h-16 w-24 rounded"
                     src={item.src}
                     alt={`Gallery_` + key}
                     width={300}
@@ -84,18 +89,12 @@ const MainFooter = () => {
       </div>
 
       <div className="container">
-        <div className="flex items-center justify-between border-t border-gray-700 py-4">
+        <div className="flex items-center justify-center border-t border-gray-700 py-4 text-xs md:text-sm">
           <div>
             <Link href="#" className="text-white">
-              &copy; Your Site Name
+              Copyright &copy; 2024 All Rights Reserved
             </Link>
-            <span className="text-gray-400">, All Rights Reserved.</span>
-          </div>
-          <div className="text-right">
-            <span className="text-gray-400">Designed By: </span>
-            <a href="https://htmlcodex.com" className="text-white">
-              Solar Bách Thịnh
-            </a>
+            <span className="text-gray-400">, Solar Bách Thịnh.</span>
           </div>
         </div>
       </div>

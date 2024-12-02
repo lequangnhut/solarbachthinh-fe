@@ -88,7 +88,9 @@ export const validateAuthCode = (fieldName: string) => {
     unauthorized: 'Email hoặc mật khẩu không chính xác',
     not_found: 'Không tìm thấy tài khoản',
     user_not_verified: 'Tài khoản chưa được xác minh',
-    email_already_exists: 'Email của bạn đã tồn tại',
+    email_already_exists: 'Email đã tồn tại',
+    phone_number_already_exists: 'Số điện thoại đã tồn tại',
+    invalid_phone_format: 'Số điện thoại không đúng định dạng',
     old_password_incorrect: 'Mật khẩu cũ không chính xác',
   };
 

@@ -5,6 +5,7 @@ import { setRegisterProps } from '@/reduxs/RegisterSlice';
 import { useAppDispatch, useAppSelector } from '@/hooks/store';
 import { authValidate, validateFieldEmpty } from '@/utils/validate';
 import { FormControl, FormItem, FormLabel, FormMessage } from '@/components/ui/Form';
+import { PhoneInput } from '@/components/ui/PhoneInput';
 
 const RegisterFormItem = () => {
   const dispatch = useAppDispatch();
@@ -26,9 +27,17 @@ const RegisterFormItem = () => {
     return newError;
   };
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const fieldName = e.target.name;
-    const fieldValue = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+  const handleChange = (e: ChangeEvent<HTMLInputElement> | string) => {
+    let fieldName: string;
+    let fieldValue: string | boolean;
+
+    if (typeof e === 'string') {
+      fieldName = 'phoneNumber';
+      fieldValue = e;
+    } else {
+      fieldName = e.target.name;
+      fieldValue = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+    }
 
     let updatedProps = {
       value: { ...value, [fieldName]: fieldValue },
@@ -65,7 +74,7 @@ const RegisterFormItem = () => {
             name="email"
             placeholder="Vui lòng nhập email"
             className={cn(
-              'rounded-lg border !border-black !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
+              'rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
               errorMsg.email && '!border-red-500',
             )}
             value={value.email}
@@ -85,7 +94,7 @@ const RegisterFormItem = () => {
             name="fullName"
             placeholder="Vui lòng nhập họ và tên"
             className={cn(
-              'rounded-lg border !border-black !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
+              'rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
               errorMsg.fullName && '!border-red-500',
             )}
             value={value.fullName}
@@ -99,16 +108,18 @@ const RegisterFormItem = () => {
           Số điện thoại
         </FormLabel>
         <FormControl>
-          <Input
-            onChange={handleChange}
-            type="text"
+          <PhoneInput
             name="phoneNumber"
+            type="text"
             placeholder="Vui lòng nhập số điện thoại"
             className={cn(
-              'rounded-lg border !border-black !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
+              'rounded-lg border !border-[#e5e7eb] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
               errorMsg.phoneNumber && '!border-red-500',
             )}
             value={value.phoneNumber}
+            onChange={handleChange}
+            defaultCountry="VN"
+            autoComplete="off"
           />
         </FormControl>
         <FormMessage className="mt-[4px] text-red-500">{errorMsg.phoneNumber}</FormMessage>
@@ -125,7 +136,7 @@ const RegisterFormItem = () => {
             name="password"
             placeholder="Vui lòng nhập mật khẩu"
             className={cn(
-              'rounded-lg border !border-black !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
+              'rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
               errorMsg.password && '!border-red-500',
             )}
             value={value.password}
@@ -145,7 +156,7 @@ const RegisterFormItem = () => {
             name="confirmPassword"
             placeholder="Vui lòng nhập nhập lại mật khẩu"
             className={cn(
-              'rounded-lg border !border-black !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
+              'rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
               errorMsg.confirmPassword && '!border-red-500',
             )}
             value={value.confirmPassword}

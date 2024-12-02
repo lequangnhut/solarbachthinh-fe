@@ -43,10 +43,10 @@ const WaitVerifyPage = () => {
     <div className="flex h-screen w-screen justify-center bg-white py-20">
       <div className="container-xxl">
         <div className="flex flex-col gap-3 px-3 md:px-6 lg:px-20">
-          <Image alt="logo-pet-rescue" width={60} height={60} src="/assets/icons/Logo.svg" />
+          <Image alt="logo-pet-rescue" width={60} height={60} src="/assets/icons/logo.png" />
 
           <h2 className="mb-3 text-sm text-gray-700 md:text-2xl">
-            <span className="text-3xl font-semibold text-gray-700">giaicuuthucung.vn</span>
+            <span className="text-3xl font-semibold text-gray-700">solarbachthinh.com</span>
             <br />
             Đang xác minh bạn là người. Quá trình này có thể mất vài giây.
           </h2>
@@ -59,7 +59,7 @@ const WaitVerifyPage = () => {
                 </div>
                 <div className="ml-6 mr-2 flex flex-col py-3">
                   <Image
-                    src="/assets/icons/Logo.svg"
+                    src="/assets/icons/logo.png"
                     alt="pet-rescue-logo"
                     width={40}
                     height={40}
@@ -69,7 +69,7 @@ const WaitVerifyPage = () => {
             </div>
           </div>
           <h2 className="mt-6 text-sm text-gray-700 md:text-2xl">
-            giaicuuthucung.vn cần đánh giá tính bảo mật của kết nối của bạn trước khi tiếp tục.
+            solarbachthinh.com cần đánh giá tính bảo mật của kết nối của bạn trước khi tiếp tục.
           </h2>
         </div>
       </div>

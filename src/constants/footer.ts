@@ -17,23 +17,23 @@ export const NAV_FOOTER_ADDRESS = [
 
 export const NAV_FOOTER_LINK = [
   {
-    name: 'About Us',
+    name: 'Trang chủ',
+    link: '/',
+  },
+  {
+    name: 'Sản phẩm',
     link: '',
   },
   {
-    name: 'Contact Us',
+    name: 'Dự án',
     link: '',
   },
   {
-    name: 'Our Services',
+    name: 'Dịch vụ',
     link: '',
   },
   {
-    name: 'Terms & Condition',
-    link: '',
-  },
-  {
-    name: 'Support',
+    name: 'Liên hệ',
     link: '',
   },
 ];
@@ -56,5 +56,26 @@ export const NAV_FOOTER_PROJECT = [
   },
   {
     src: '/assets/images/base/gallery-6.jpg',
+  },
+];
+
+export const NAV_FOOTER_BRANDS = [
+  {
+    src: '/assets/images/brands/longi-solar.jpg',
+  },
+  {
+    src: '/assets/images/brands/1200px-Logo_SMA.svg.png',
+  },
+  {
+    src: '/assets/images/brands/ae-solar.png',
+  },
+  {
+    src: '/assets/images/brands/growat.jpg',
+  },
+  {
+    src: '/assets/images/brands/canadian.png',
+  },
+  {
+    src: '/assets/images/brands/sofarsolarlogo.jpg',
   },
 ];
