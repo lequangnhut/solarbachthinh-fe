@@ -65,24 +65,6 @@
   scrollbar-width: none;
 }
 
-.camera-overlay {
-  background-color: rgba(0, 0, 0, 0.4);
-  transition: opacity 0.4s ease-in-out;
-  border-radius: 50%;
-}
-
-.avatar-image {
-  transition: transform 0.3s ease-in-out;
-}
-
-.relative:hover .avatar-image {
-  transform: scale(0.95);
-}
-
-.relative:hover .camera-overlay {
-  opacity: 1;
-}
-
 .page-header {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/assets/images/base/carousel-2.jpg');
 }

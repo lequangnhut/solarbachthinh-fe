@@ -73,7 +73,7 @@ const RegisterForm = () => {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center overflow-hidden bg-[url('/assets/images/base/carousel-2.jpg')] bg-cover bg-center">
+    <div className="flex min-h-screen items-center justify-center overflow-hidden bg-[url('/assets/images/base/carousel-2.jpg')] bg-cover bg-center bg-no-repeat">
       <div className="m-2 mt-10 w-full max-w-md rounded-lg bg-white p-8 shadow-lg md:mt-16">
         <h2 className="mb-6 text-center text-2xl font-bold">Đăng ký</h2>
         <form className="space-y-8" method="post" onSubmit={handleSubmit}>
