@@ -26,7 +26,7 @@ const PageHeaderLayout = ({ pageTitle, children }: IProps) => {
           </nav>
         </div>
       </div>
-      {children} {/* Hiển thị nội dung con */}
+      {children}
     </>
   );
 };

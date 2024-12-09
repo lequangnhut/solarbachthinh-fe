@@ -8,7 +8,7 @@ const TopBarHeader = () => {
         <div className="px-5 text-start lg:w-7/12">
           <div className="me-4 inline-flex h-full items-center">
             <MapPinIcon className="me-2 w-4 text-primary" />
-            <small className="text-sm text-gray-400">TT.Núi Sập, Thoại Sơn, An Giang</small>
+            <small className="text-sm text-gray-400">Núi Sập, Thoại Sơn, An Giang</small>
           </div>
           <div className="inline-flex h-full items-center">
             <Clock className="me-2 w-4 text-primary" />

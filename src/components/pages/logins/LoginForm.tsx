@@ -167,7 +167,7 @@ const LoginForm = () => {
             type="submit"
             variant="default"
             size="lg"
-            className="h-11 w-full"
+            className="h-11 w-full bg-primary hover:bg-primary-bold"
             disabled={checkDisabled || loading}
             loading={loading}
           >

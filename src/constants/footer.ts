@@ -2,7 +2,7 @@ import { Mail, MapPinIcon, Phone } from 'lucide-react';
 
 export const NAV_FOOTER_ADDRESS = [
   {
-    name: 'TT.Núi Sập, Thoại Sơn, An Giang',
+    name: 'Núi Sập, Thoại Sơn, An Giang',
     icon: MapPinIcon,
   },
   {
