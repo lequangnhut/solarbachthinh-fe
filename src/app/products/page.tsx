@@ -1,4 +1,4 @@
-import PageHeaderLayout from '@/components/commons/PageHeaderLayout';
+import PageHeaderLayout from '@/components/commons/headers/PageHeaderLayout';
 import ProductCategory from '@/components/pages/products/categories/ProductCategory';
 
 export default function ProductPage() {

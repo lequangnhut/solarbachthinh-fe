@@ -10,7 +10,7 @@ import {
 
 const MainFooter = () => {
   return (
-    <div className="mt-20 bg-[#1A2A36] pt-20">
+    <div className="bg-[#1A2A36] pt-20">
       <div className="container mb-5">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>

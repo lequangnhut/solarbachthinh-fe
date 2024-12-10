@@ -1,4 +1,4 @@
-import PageHeaderLayout from '@/components/commons/PageHeaderLayout';
+import PageHeaderLayout from '@/components/commons/headers/PageHeaderLayout';
 
 const InformationPage = async () => {
   return (

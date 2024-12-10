@@ -1,5 +1,10 @@
-import PageHeaderLayout from '@/components/commons/PageHeaderLayout';
+import MainContact from '@/components/pages/contacts/MainContact';
+import MapPageHeaderLayout from '@/components/commons/headers/MapPageHeaderLayout';
 
 export default function ContactPage() {
-  return <PageHeaderLayout pageTitle="Liên hệ">About Page</PageHeaderLayout>;
+  return (
+    <MapPageHeaderLayout>
+      <MainContact />
+    </MapPageHeaderLayout>
+  );
 }
