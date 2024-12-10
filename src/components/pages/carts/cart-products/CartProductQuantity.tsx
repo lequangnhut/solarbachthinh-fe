@@ -28,7 +28,7 @@ const CartProductQuantity = () => {
           </Button>
         </div>
 
-        <div className="space-y-3 text-gray-500 md:place-items-end">
+        <div className="space-y-3 text-gray-500 lg:place-items-end">
           <p className="font-medium">
             <span>Đơn giá:&nbsp;</span>
             <span>450.000 đ</span>
