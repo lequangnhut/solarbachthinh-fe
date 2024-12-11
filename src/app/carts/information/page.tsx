@@ -3,7 +3,7 @@ import PageHeaderLayout from '@/components/commons/headers/PageHeaderLayout';
 const InformationPage = async () => {
   return (
     <PageHeaderLayout pageTitle="Thông tin đơn hàng">
-      <>hihi con cặc</>
+      <div></div>
     </PageHeaderLayout>
   );
 };

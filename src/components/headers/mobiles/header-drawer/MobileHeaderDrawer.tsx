@@ -38,7 +38,7 @@ const MobileHeaderDrawer = () => {
   }, []);
 
   return (
-    <div className="mr-4 block rounded-md border border-solid border-gray-400 p-2 px-3.5">
+    <div className="mr-4 block rounded-md border border-solid border-gray-400 p-2 px-3">
       <Drawer open={toggleOpenHeader} direction="right">
         <div className="h-6 w-6">
           <Menu

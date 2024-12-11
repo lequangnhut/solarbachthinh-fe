@@ -22,7 +22,7 @@ const CartProductDetail = ({ image }: IProps) => {
 
         <CartProductInformation />
         <CartProductQuantity />
-        <hr className="w-full lg:col-span-4" />
+        <hr className="col-span-2 w-full lg:col-span-4" />
       </div>
     </div>
   );
