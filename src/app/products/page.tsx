@@ -1,10 +1,10 @@
+import MainProducts from '@/components/pages/products/MainProducts';
 import PageHeaderLayout from '@/components/commons/headers/PageHeaderLayout';
-import ProductCategory from '@/components/pages/products/categories/ProductCategory';
 
 export default function ProductPage() {
   return (
     <PageHeaderLayout pageTitle="Sản phẩm">
-      <ProductCategory />
+      <MainProducts />
     </PageHeaderLayout>
   );
 }

@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import { Clock, Facebook, Instagram, MapPinIcon, Phone, Twitch, Youtube } from 'lucide-react';
+import { getCurrentDate } from '@/utils/getCurrentDate';
 
 const TopBarHeader = () => {
+  const currentDate = getCurrentDate();
+
   return (
     <div className="bg-[#1A2A36] p-1">
       <div className="hidden lg:flex">
@@ -12,7 +15,7 @@ const TopBarHeader = () => {
           </div>
           <div className="inline-flex h-full items-center">
             <Clock className="me-2 w-4 text-primary" />
-            <small className="text-sm text-gray-400">Mon - Fri : 09.00 AM - 09.00 PM</small>
+            <small className="text-sm text-gray-400">{currentDate}</small>
           </div>
         </div>
         <div className="px-5 text-end lg:w-5/12">

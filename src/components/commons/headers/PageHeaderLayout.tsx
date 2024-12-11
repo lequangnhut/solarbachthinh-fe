@@ -8,7 +8,7 @@ interface IProps {
 const PageHeaderLayout = ({ pageTitle, children }: IProps) => {
   return (
     <>
-      <div className="page-header mx-auto mb-20 bg-cover bg-repeat py-8">
+      <div className="page-header mx-auto bg-cover bg-repeat py-8">
         <div className="container py-20">
           <h1 className="mb-3 text-4xl font-bold text-white md:text-6xl">{pageTitle}</h1>
           <nav aria-label="breadcrumb">

@@ -1,4 +1,4 @@
-import HeaderDesktopBtn from './HeaderDesktop';
+import HeaderDesktop from './HeaderDesktop';
 import MobileMainHeader from './mobiles/MobileMainHeader';
 import TopBarHeader from './tools/TopBarHeader';
 
@@ -7,7 +7,7 @@ const MainHeader = () => {
     <>
       <div className="hidden xl:block">
         <TopBarHeader />
-        <HeaderDesktopBtn />
+        <HeaderDesktop />
       </div>
 
       <div className="block xl:hidden">

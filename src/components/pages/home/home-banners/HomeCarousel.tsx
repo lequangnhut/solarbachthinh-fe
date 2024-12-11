@@ -1,15 +1,13 @@
 'use client';
 
-import 'swiper/css';
-import 'swiper/css/autoplay';
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperClass } from 'swiper';
+import { Button } from '@/components/ui/Button';
 import { setHomeProps } from '@/reduxs/HomeSlice';
 import { Navigation, Autoplay } from 'swiper/modules';
 import { useAppDispatch, useAppSelector } from '@/hooks/store';
-import { Button } from '@/components/ui/Button';
 
 const HomeCarousel = () => {
   const dispatch = useAppDispatch();

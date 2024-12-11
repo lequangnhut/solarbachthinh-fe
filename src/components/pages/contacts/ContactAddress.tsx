@@ -4,10 +4,11 @@ const ContactAddress = () => {
   const address = [
     {
       headquarters: 'Trụ sở chính',
-      address: '12 Đông Hưng Thuận 10, KP.3, P. Đông Hưng Thuận, Quận 12, TP. HCM',
-      phoneNumber: '(+84) 283 715 7567',
-      hotline: '1800 6567',
-      fax: '(+84) 283 891 6586',
+      address:
+        'Đối diện nhà văn hóa thiếu nhi, ấp Bắc Sơn, thị trấn Núi Sập, huyện Thoại Sơn, tỉnh An Giang',
+      phoneNumber: '(+84) 918 619 651',
+      hotline: '0918 619 651',
+      fax: '(+84) 918 619 651',
       email: 'lethanhkietdl@gmail.com',
     },
   ];

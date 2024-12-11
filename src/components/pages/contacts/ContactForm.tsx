@@ -6,7 +6,9 @@ const ContactForm = () => {
     <div className="mb-20 min-h-screen w-full shadow-lg md:mb-0">
       <div className="mt-12 px-6 lg:mt-24 xl:px-28">
         <h1 className="mb-3 text-lg">Form liên hệ</h1>
-        <h1 className="text-3xl font-bold uppercase text-primary">Kết nối với chúng tôi</h1>
+        <h1 className="text-2xl font-bold uppercase text-primary lg:text-3xl">
+          Kết nối với chúng tôi
+        </h1>
 
         <form autoComplete="off">
           <ContactFormItem />

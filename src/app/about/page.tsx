@@ -1,5 +1,12 @@
-import PageHeaderLayout from '@/components/commons/headers/PageHeaderLayout';
+import CustomComingSoon from '@/components/commons/CustomComingSoon';
+import NoFooterContentLayout from '@/components/layouts/NoFooterContentLayout';
 
 export default function AboutPage() {
-  return <PageHeaderLayout pageTitle="Giới thiệu">About Page</PageHeaderLayout>;
+  return (
+    <NoFooterContentLayout>
+      <div className="flex h-[90vh] w-full items-center justify-center">
+        <CustomComingSoon />
+      </div>
+    </NoFooterContentLayout>
+  );
 }
