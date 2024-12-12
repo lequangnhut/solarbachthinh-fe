@@ -1,6 +1,6 @@
-import HomeServiceEnergy from './HomeServiceEnergy';
-import HomeServiceFuture from './HomeServiceFuture';
-import HomeServiceProject from './HomeServiceProject';
+import HomeServiceEnergy from "./HomeServiceEnergy";
+import HomeServiceFuture from "./HomeServiceFuture";
+import HomeServiceProject from "./HomeServiceProject";
 
 const HomeServices = () => {
   return (

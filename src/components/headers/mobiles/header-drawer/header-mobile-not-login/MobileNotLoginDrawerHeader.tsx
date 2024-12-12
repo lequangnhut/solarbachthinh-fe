@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { useAppDispatch } from '@/hooks/store';
-import { setHomeProps } from '@/reduxs/HomeSlice';
+import Link from "next/link";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useAppDispatch } from "@/hooks/store";
+import { setHomeProps } from "@/reduxs/HomeSlice";
 
 const MobileNotLoginDrawerHeader = () => {
   const dispatch = useAppDispatch();
@@ -12,7 +12,10 @@ const MobileNotLoginDrawerHeader = () => {
 
   return (
     <div className="mb-8 flex items-center justify-between py-2">
-      <div onClick={toggleProfile} className="flex cursor-pointer items-center gap-2">
+      <div
+        onClick={toggleProfile}
+        className="flex cursor-pointer items-center gap-2"
+      >
         <ChevronLeft width={18} height={18} />
         <p className="text-sm"> Về trang chính</p>
       </div>

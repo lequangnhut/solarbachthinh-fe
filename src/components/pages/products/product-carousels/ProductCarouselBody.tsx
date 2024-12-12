@@ -1,37 +1,37 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const ProductCarouselBody = () => {
   const products = [
     {
       id: 1,
-      name: 'ĐÈN ĐƯỜNG NĂNG LƯỢNG MẶT TRỜI SOKOYO INTENSE 40W, 50W, 60W',
-      power: '40W - 60W',
-      brand: 'Sokoyo',
-      image: '/assets/images/products/den-led.png',
+      name: "ĐÈN ĐƯỜNG NĂNG LƯỢNG MẶT TRỜI SOKOYO INTENSE 40W, 50W, 60W",
+      power: "40W - 60W",
+      brand: "Sokoyo",
+      image: "/assets/images/products/den-led.png",
     },
     {
       id: 2,
-      name: 'ĐÈN ĐƯỜNG NĂNG LƯỢNG MẶT TRỜI SOKOYO AMBO 30W',
-      power: '30W',
-      brand: 'Sokoyo',
-      image: '/assets/images/products/den-led.png',
+      name: "ĐÈN ĐƯỜNG NĂNG LƯỢNG MẶT TRỜI SOKOYO AMBO 30W",
+      power: "30W",
+      brand: "Sokoyo",
+      image: "/assets/images/products/den-led.png",
     },
     {
       id: 3,
-      name: 'ĐÈN ĐƯỜNG NĂNG LƯỢNG MẶT TRỜI SOKOYO NOVA 30W, 40W, 50W, 60W',
-      power: '30W - 60W',
-      brand: 'Sokoyo',
-      image: '/assets/images/products/den-led.png',
+      name: "ĐÈN ĐƯỜNG NĂNG LƯỢNG MẶT TRỜI SOKOYO NOVA 30W, 40W, 50W, 60W",
+      power: "30W - 60W",
+      brand: "Sokoyo",
+      image: "/assets/images/products/den-led.png",
     },
     {
       id: 4,
-      name: 'ĐÈN ĐƯỜNG NĂNG LƯỢNG MẶT TRỜI SOKOYO NOVA 30W, 40W, 50W, 60W',
-      power: '30W - 60W',
-      brand: 'Sokoyo',
-      image: '/assets/images/products/den-led.png',
+      name: "ĐÈN ĐƯỜNG NĂNG LƯỢNG MẶT TRỜI SOKOYO NOVA 30W, 40W, 50W, 60W",
+      power: "30W - 60W",
+      brand: "Sokoyo",
+      image: "/assets/images/products/den-led.png",
     },
   ];
 

@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import MobileHeaderDrawer from './header-drawer/MobileHeaderDrawer';
-import MobileHeaderCartBtn from './header-drawer/MobileHeaderCartBtn';
+import Link from "next/link";
+import MobileHeaderDrawer from "./header-drawer/MobileHeaderDrawer";
+import MobileHeaderCartBtn from "./header-drawer/MobileHeaderCartBtn";
 
 const MobileMainHeader = () => {
   return (

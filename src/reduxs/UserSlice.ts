@@ -1,9 +1,9 @@
-import { IUserState, IUserStateForData } from '@/types/user';
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { IUserState, IUserStateForData } from "@/types/user";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export const defaultUserInfo = {
-  id: '',
-  email: '',
+  id: "",
+  email: "",
 };
 
 const initialState: IUserState = {
@@ -13,7 +13,7 @@ const initialState: IUserState = {
 };
 
 const slice = createSlice({
-  name: 'User Slice',
+  name: "User Slice",
   initialState,
   reducers: {
     setUserProps(state, action: PayloadAction<IUserStateForData>) {

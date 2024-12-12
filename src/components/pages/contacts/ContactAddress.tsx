@@ -1,15 +1,15 @@
-import ContactAddressItem from './ContactAddressItem';
+import ContactAddressItem from "./ContactAddressItem";
 
 const ContactAddress = () => {
   const address = [
     {
-      headquarters: 'Trụ sở chính',
+      headquarters: "Trụ sở chính",
       address:
-        'Đối diện nhà văn hóa thiếu nhi, ấp Bắc Sơn, thị trấn Núi Sập, huyện Thoại Sơn, tỉnh An Giang',
-      phoneNumber: '(+84) 918 619 651',
-      hotline: '0918 619 651',
-      fax: '(+84) 918 619 651',
-      email: 'lethanhkietdl@gmail.com',
+        "Đối diện nhà văn hóa thiếu nhi, ấp Bắc Sơn, thị trấn Núi Sập, huyện Thoại Sơn, tỉnh An Giang",
+      phoneNumber: "(+84) 918 619 651",
+      hotline: "0918 619 651",
+      fax: "(+84) 918 619 651",
+      email: "lethanhkietdl@gmail.com",
     },
   ];
 

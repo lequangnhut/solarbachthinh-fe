@@ -1,11 +1,16 @@
-import { ChangeEvent } from 'react';
-import { cn } from '@/utils';
-import { Input } from '@/components/ui/Input';
-import { setRegisterProps } from '@/reduxs/RegisterSlice';
-import { useAppDispatch, useAppSelector } from '@/hooks/store';
-import { authValidate, validateFieldEmpty } from '@/utils/validate';
-import { FormControl, FormItem, FormLabel, FormMessage } from '@/components/ui/Form';
-import { PhoneInput } from '@/components/ui/PhoneInput';
+import { ChangeEvent } from "react";
+import { cn } from "@/utils";
+import { Input } from "@/components/ui/Input";
+import { setRegisterProps } from "@/reduxs/RegisterSlice";
+import { useAppDispatch, useAppSelector } from "@/hooks/store";
+import { authValidate, validateFieldEmpty } from "@/utils/validate";
+import {
+  FormControl,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/Form";
+import { PhoneInput } from "@/components/ui/PhoneInput";
 
 const RegisterFormItem = () => {
   const dispatch = useAppDispatch();
@@ -15,13 +20,13 @@ const RegisterFormItem = () => {
   const checkFieldEmpty = (fieldName: string, fieldValue: string) => {
     let newError = { ...errorMsg };
 
-    if (!fieldValue && fieldName !== 'inviteCode') {
+    if (!fieldValue && fieldName !== "inviteCode") {
       newError = {
         ...newError,
         [fieldName]: validateFieldEmpty(fieldName),
       };
     } else {
-      newError = { ...newError, [fieldName]: '' };
+      newError = { ...newError, [fieldName]: "" };
     }
 
     return newError;
@@ -31,12 +36,13 @@ const RegisterFormItem = () => {
     let fieldName: string;
     let fieldValue: string | boolean;
 
-    if (typeof e === 'string') {
-      fieldName = 'phoneNumber';
+    if (typeof e === "string") {
+      fieldName = "phoneNumber";
       fieldValue = e;
     } else {
       fieldName = e.target.name;
-      fieldValue = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+      fieldValue =
+        e.target.type === "checkbox" ? e.target.checked : e.target.value;
     }
 
     let updatedProps = {
@@ -50,12 +56,17 @@ const RegisterFormItem = () => {
         errorMsg: checkFieldEmpty(fieldName, String(fieldValue)),
       };
     } else {
-      const keyMultiLanguage = authValidate(fieldName, String(fieldValue), value.password, '');
+      const keyMultiLanguage = authValidate(
+        fieldName,
+        String(fieldValue),
+        value.password,
+        "",
+      );
       updatedProps = {
         ...updatedProps,
         errorMsg: {
           ...errorMsg,
-          [fieldName]: keyMultiLanguage ? keyMultiLanguage : '',
+          [fieldName]: keyMultiLanguage ? keyMultiLanguage : "",
         },
       };
     }
@@ -66,7 +77,11 @@ const RegisterFormItem = () => {
   return (
     <>
       <FormItem className="!mt-3">
-        <FormLabel className={cn('text-black', errorMsg.email && 'text-red-500')}>Email</FormLabel>
+        <FormLabel
+          className={cn("text-black", errorMsg.email && "text-red-500")}
+        >
+          Email
+        </FormLabel>
         <FormControl>
           <Input
             onChange={handleChange}
@@ -74,17 +89,21 @@ const RegisterFormItem = () => {
             name="email"
             placeholder="Vui lòng nhập email"
             className={cn(
-              'rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
-              errorMsg.email && '!border-red-500',
+              "rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0",
+              errorMsg.email && "!border-red-500",
             )}
             value={value.email}
           />
         </FormControl>
-        <FormMessage className="mt-[4px] text-red-500">{errorMsg.email}</FormMessage>
+        <FormMessage className="mt-[4px] text-red-500">
+          {errorMsg.email}
+        </FormMessage>
       </FormItem>
 
       <FormItem className="!mt-4">
-        <FormLabel className={cn('text-black', errorMsg.fullName && 'text-red-500')}>
+        <FormLabel
+          className={cn("text-black", errorMsg.fullName && "text-red-500")}
+        >
           Họ và tên
         </FormLabel>
         <FormControl>
@@ -94,17 +113,21 @@ const RegisterFormItem = () => {
             name="fullName"
             placeholder="Vui lòng nhập họ và tên"
             className={cn(
-              'rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
-              errorMsg.fullName && '!border-red-500',
+              "rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0",
+              errorMsg.fullName && "!border-red-500",
             )}
             value={value.fullName}
           />
         </FormControl>
-        <FormMessage className="mt-[4px] text-red-500">{errorMsg.fullName}</FormMessage>
+        <FormMessage className="mt-[4px] text-red-500">
+          {errorMsg.fullName}
+        </FormMessage>
       </FormItem>
 
       <FormItem className="!mt-4">
-        <FormLabel className={cn('text-black', errorMsg.fullName && 'text-red-500')}>
+        <FormLabel
+          className={cn("text-black", errorMsg.fullName && "text-red-500")}
+        >
           Số điện thoại
         </FormLabel>
         <FormControl>
@@ -113,8 +136,8 @@ const RegisterFormItem = () => {
             type="text"
             placeholder="Vui lòng nhập số điện thoại"
             className={cn(
-              'rounded-lg border !border-[#e5e7eb] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
-              errorMsg.phoneNumber && '!border-red-500',
+              "rounded-lg border !border-[#e5e7eb] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0",
+              errorMsg.phoneNumber && "!border-red-500",
             )}
             value={value.phoneNumber}
             onChange={handleChange}
@@ -122,11 +145,15 @@ const RegisterFormItem = () => {
             autoComplete="off"
           />
         </FormControl>
-        <FormMessage className="mt-[4px] text-red-500">{errorMsg.phoneNumber}</FormMessage>
+        <FormMessage className="mt-[4px] text-red-500">
+          {errorMsg.phoneNumber}
+        </FormMessage>
       </FormItem>
 
       <FormItem className="!mt-4">
-        <FormLabel className={cn('text-black', errorMsg.password && 'text-red-500')}>
+        <FormLabel
+          className={cn("text-black", errorMsg.password && "text-red-500")}
+        >
           Mật khẩu
         </FormLabel>
         <FormControl>
@@ -136,17 +163,24 @@ const RegisterFormItem = () => {
             name="password"
             placeholder="Vui lòng nhập mật khẩu"
             className={cn(
-              'rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
-              errorMsg.password && '!border-red-500',
+              "rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0",
+              errorMsg.password && "!border-red-500",
             )}
             value={value.password}
           />
         </FormControl>
-        <FormMessage className="mt-[4px] text-red-500">{errorMsg.password}</FormMessage>
+        <FormMessage className="mt-[4px] text-red-500">
+          {errorMsg.password}
+        </FormMessage>
       </FormItem>
 
       <FormItem className="!mt-4">
-        <FormLabel className={cn('text-black', errorMsg.confirmPassword && 'text-red-500')}>
+        <FormLabel
+          className={cn(
+            "text-black",
+            errorMsg.confirmPassword && "text-red-500",
+          )}
+        >
           Nhập lại mật khẩu
         </FormLabel>
         <FormControl>
@@ -156,13 +190,15 @@ const RegisterFormItem = () => {
             name="confirmPassword"
             placeholder="Vui lòng nhập nhập lại mật khẩu"
             className={cn(
-              'rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
-              errorMsg.confirmPassword && '!border-red-500',
+              "rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0",
+              errorMsg.confirmPassword && "!border-red-500",
             )}
             value={value.confirmPassword}
           />
         </FormControl>
-        <FormMessage className="mt-[4px] text-red-500">{errorMsg.confirmPassword}</FormMessage>
+        <FormMessage className="mt-[4px] text-red-500">
+          {errorMsg.confirmPassword}
+        </FormMessage>
       </FormItem>
 
       <div className="!mt-4 flex flex-col items-start">

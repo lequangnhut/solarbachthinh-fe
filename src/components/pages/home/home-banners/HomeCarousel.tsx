@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { useEffect, useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Swiper as SwiperClass } from 'swiper';
-import { Button } from '@/components/ui/Button';
-import { setHomeProps } from '@/reduxs/HomeSlice';
-import { Navigation, Autoplay } from 'swiper/modules';
-import { useAppDispatch, useAppSelector } from '@/hooks/store';
+import Image from "next/image";
+import { useEffect, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperClass } from "swiper";
+import { Button } from "@/components/ui/Button";
+import { setHomeProps } from "@/reduxs/HomeSlice";
+import { Navigation, Autoplay } from "swiper/modules";
+import { useAppDispatch, useAppSelector } from "@/hooks/store";
 
 const HomeCarousel = () => {
   const dispatch = useAppDispatch();
@@ -16,27 +16,27 @@ const HomeCarousel = () => {
 
   const slides = [
     {
-      src: '/assets/images/base/carousel-1.jpg',
-      title: 'Pioneers Of Solar And Renewable Energy',
+      src: "/assets/images/base/carousel-1.jpg",
+      title: "Pioneers Of Solar And Renewable Energy",
       description:
-        'Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.',
+        "Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.",
     },
     {
-      src: '/assets/images/base/carousel-2.jpg',
-      title: 'Innovations in Renewable Energy',
+      src: "/assets/images/base/carousel-2.jpg",
+      title: "Innovations in Renewable Energy",
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
-      src: '/assets/images/base/carousel-3.jpg',
-      title: 'Towards a Sustainable Future',
+      src: "/assets/images/base/carousel-3.jpg",
+      title: "Towards a Sustainable Future",
       description:
-        'Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        "Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
   ];
 
   useEffect(() => {
-    if (swiperRef.current && typeof isActiveSlide === 'number') {
+    if (swiperRef.current && typeof isActiveSlide === "number") {
       const currentSlide = swiperRef.current.realIndex;
       if (currentSlide !== isActiveSlide) {
         swiperRef.current.slideToLoop(isActiveSlide);
@@ -75,7 +75,9 @@ const HomeCarousel = () => {
             <h1 className="mb-4 text-5xl font-bold text-white md:w-2/3 md:text-7xl">
               {slide.title}
             </h1>
-            <p className="mb-6 w-2/3 text-white md:text-2xl">{slide.description}</p>
+            <p className="mb-6 w-2/3 text-white md:text-2xl">
+              {slide.description}
+            </p>
             <Button className="rounded-full bg-primary px-9 py-3 text-white hover:bg-primary-bold">
               Đọc thêm
             </Button>

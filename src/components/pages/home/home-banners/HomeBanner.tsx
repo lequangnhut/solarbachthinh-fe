@@ -1,5 +1,5 @@
-import HomeDots from './HomeDots';
-import HomeCarousel from './HomeCarousel';
+import HomeDots from "./HomeDots";
+import HomeCarousel from "./HomeCarousel";
 
 const HomeBanner = () => {
   return (

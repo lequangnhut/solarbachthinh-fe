@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { cn } from '@/utils';
-import { NAV_MENU } from '@/constants/menu';
-import { useAppSelector } from '@/hooks/store';
-import UserToolBox from '../UserToolBox';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { cn } from "@/utils";
+import { NAV_MENU } from "@/constants/menu";
+import { useAppSelector } from "@/hooks/store";
+import UserToolBox from "../UserToolBox";
 
 const HeaderDesktopMenu = () => {
   const pathname = usePathname();
@@ -15,8 +15,8 @@ const HeaderDesktopMenu = () => {
         <Link
           href={navItem.link}
           className={cn(
-            'py-2 text-gray-700 transition hover:text-primary',
-            pathname === navItem.link && 'font-bold text-primary',
+            "py-2 text-gray-700 transition hover:text-primary",
+            pathname === navItem.link && "font-bold text-primary",
           )}
           key={key}
         >

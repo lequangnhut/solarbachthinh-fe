@@ -1,5 +1,5 @@
-import ProductCategory from './categories/ProductCategory';
-import ProductCarousel from './product-carousels/ProductCarousel';
+import ProductCategory from "./categories/ProductCategory";
+import ProductCarousel from "./product-carousels/ProductCarousel";
 
 const MainProducts = () => {
   return (

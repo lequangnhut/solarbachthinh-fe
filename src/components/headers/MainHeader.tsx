@@ -1,6 +1,6 @@
-import HeaderDesktop from './HeaderDesktop';
-import MobileMainHeader from './mobiles/MobileMainHeader';
-import TopBarHeader from './tools/TopBarHeader';
+import HeaderDesktop from "./HeaderDesktop";
+import MobileMainHeader from "./mobiles/MobileMainHeader";
+import TopBarHeader from "./tools/TopBarHeader";
 
 const MainHeader = () => {
   return (

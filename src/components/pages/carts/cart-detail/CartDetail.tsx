@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { ReceiptText } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
-import CartDetailInformation from './CartDetailInformation';
+import Link from "next/link";
+import { ReceiptText } from "lucide-react";
+import { Button } from "@/components/ui/Button";
+import CartDetailInformation from "./CartDetailInformation";
 
 const CartDetail = () => {
   return (

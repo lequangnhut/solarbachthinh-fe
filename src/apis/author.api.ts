@@ -1,5 +1,5 @@
-import restConnector from '@/connectors/AxiosRestConnector';
-import { isProduction } from '@/utils';
+import restConnector from "@/connectors/AxiosRestConnector";
+import { isProduction } from "@/utils";
 
 export const register = async (values: {
   email: string;
@@ -7,7 +7,7 @@ export const register = async (values: {
   phoneNumber: string;
   password: string;
 }) => {
-  const { data } = await restConnector().post('/auth/register', {
+  const { data } = await restConnector().post("/auth/register", {
     ...values,
   });
 
@@ -15,7 +15,7 @@ export const register = async (values: {
 };
 
 export const login = async (values: { email: string; password: string }) => {
-  const { data } = await restConnector().post('/auth/login', {
+  const { data } = await restConnector().post("/auth/login", {
     ...values,
   });
 
@@ -24,7 +24,7 @@ export const login = async (values: { email: string; password: string }) => {
 
 export const getCurrentUser = async (jwtToken?: string) => {
   try {
-    const { data } = await restConnector(jwtToken).get('/auth/whoami');
+    const { data } = await restConnector(jwtToken).get("/auth/whoami");
     if (data.success) {
       return data.data;
     }
@@ -34,9 +34,19 @@ export const getCurrentUser = async (jwtToken?: string) => {
 };
 
 export const verifyEmail = async (values: { token: string }) => {
-  const { data } = await restConnector().post('/auth/verify-email', {
+  const { data } = await restConnector().post("/auth/verify-email", {
     token: values.token,
   });
 
+  return data;
+};
+
+export const forgotPassword = async (values: { email: string }) => {
+  const { data } = await restConnector().post("/auth/forgot-password", values);
+  return data;
+};
+
+export const resendVerificationEmail = async (email: string) => {
+  const { data } = await restConnector().post(`/auth/email/resend`, { email });
   return data;
 };

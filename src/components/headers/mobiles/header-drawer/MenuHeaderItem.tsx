@@ -1,8 +1,8 @@
-import { ChevronRight } from 'lucide-react';
-import { usePathname, useRouter } from 'next/navigation';
-import { cn } from '@/utils';
-import { useAppDispatch } from '@/hooks/store';
-import { setHomeProps } from '@/reduxs/HomeSlice';
+import { ChevronRight } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
+import { cn } from "@/utils";
+import { useAppDispatch } from "@/hooks/store";
+import { setHomeProps } from "@/reduxs/HomeSlice";
 
 interface IProps {
   item: {
@@ -26,8 +26,8 @@ const MenuHeaderItem = ({ item }: IProps) => {
     <div
       onClick={toggleProfile}
       className={cn(
-        'mb-8 flex items-center justify-between text-black',
-        pathname === item.url && 'font-bold text-primary',
+        "mb-8 flex items-center justify-between text-black",
+        pathname === item.url && "font-bold text-primary",
       )}
     >
       <div className="flex items-center gap-2">

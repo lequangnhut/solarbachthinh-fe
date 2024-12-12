@@ -1,16 +1,17 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { FormEvent, useMemo } from 'react';
-import { isProduction } from '@/utils';
-import { register } from '@/apis/author.api';
-import { Button } from '@/components/ui/Button';
-import { validateAuthCode } from '@/utils/validate';
-import { useToast } from '@/components/ui/use-toast';
-import { setRegisterProps } from '@/reduxs/RegisterSlice';
-import { useAppDispatch, useAppSelector } from '@/hooks/store';
-import RegisterFormItem from './RegisterFormItem';
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { FormEvent, useMemo } from "react";
+import { isProduction } from "@/utils";
+import { register } from "@/apis/author.api";
+import { VerifyType } from "@/constants/auth";
+import { Button } from "@/components/ui/Button";
+import { validateAuthCode } from "@/utils/validate";
+import { useToast } from "@/components/ui/use-toast";
+import { setRegisterProps } from "@/reduxs/RegisterSlice";
+import { useAppDispatch, useAppSelector } from "@/hooks/store";
+import RegisterFormItem from "./RegisterFormItem";
 
 const RegisterForm = () => {
   const { toast } = useToast();
@@ -53,15 +54,20 @@ const RegisterForm = () => {
 
       if (res.success) {
         toast({
-          description: 'Đăng ký tài khoản thành công',
-          status: 'success',
+          description: "Đăng ký tài khoản thành công",
+          status: "success",
         });
-        router.push('/verify');
-        dispatch(setRegisterProps({ isVerifyEmail: true }));
+        router.push(`/verify?type=${VerifyType.Email}`);
+        dispatch(
+          setRegisterProps({
+            isVerifyEmail: true,
+            emailWaitVerify: values.email,
+          }),
+        );
       } else {
         toast({
           description: validateAuthCode(res.code),
-          status: 'error',
+          status: "error",
         });
       }
 

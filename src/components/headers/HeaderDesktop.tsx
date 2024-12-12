@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useAppSelector } from '@/hooks/store';
-import BrandName from '../brands/BrandName';
-import HeaderDesktopBtn from './tools/HeaderDesktopBtn';
-import HeaderDesktopMenu from './tools/HeaderDesktopMenu';
-import HeaderDesktopCart from './tools/HeaderDesktopCart';
+import { useAppSelector } from "@/hooks/store";
+import BrandName from "../brands/BrandName";
+import HeaderDesktopBtn from "./tools/HeaderDesktopBtn";
+import HeaderDesktopMenu from "./tools/HeaderDesktopMenu";
+import HeaderDesktopCart from "./tools/HeaderDesktopCart";
 
 const HeaderDesktop = () => {
   const currUser = useAppSelector((state) => state.user.userInfo);

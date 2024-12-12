@@ -1,12 +1,18 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { ChevronRight, FacebookIcon, LinkedinIcon, TwitterIcon, YoutubeIcon } from 'lucide-react';
+import Link from "next/link";
+import Image from "next/image";
+import {
+  ChevronRight,
+  FacebookIcon,
+  LinkedinIcon,
+  TwitterIcon,
+  YoutubeIcon,
+} from "lucide-react";
 import {
   NAV_FOOTER_ADDRESS,
   NAV_FOOTER_BRANDS,
   NAV_FOOTER_LINK,
   NAV_FOOTER_PROJECT,
-} from '@/constants/footer';
+} from "@/constants/footer";
 
 const MainFooter = () => {
   return (
@@ -23,16 +29,28 @@ const MainFooter = () => {
             ))}
 
             <div className="flex space-x-2 pt-2">
-              <Link className="text-white transition duration-300 hover:text-primary" href="">
+              <Link
+                className="text-white transition duration-300 hover:text-primary"
+                href=""
+              >
                 <TwitterIcon />
               </Link>
-              <Link className="text-white transition duration-300 hover:text-primary" href="">
+              <Link
+                className="text-white transition duration-300 hover:text-primary"
+                href=""
+              >
                 <FacebookIcon />
               </Link>
-              <Link className="text-white transition duration-300 hover:text-primary" href="">
+              <Link
+                className="text-white transition duration-300 hover:text-primary"
+                href=""
+              >
                 <YoutubeIcon />
               </Link>
-              <Link className="text-white transition duration-300 hover:text-primary" href="">
+              <Link
+                className="text-white transition duration-300 hover:text-primary"
+                href=""
+              >
                 <LinkedinIcon />
               </Link>
             </div>
@@ -53,7 +71,9 @@ const MainFooter = () => {
           </div>
 
           <div>
-            <h5 className="mb-4 text-xl font-bold text-white">Hình ảnh dự án</h5>
+            <h5 className="mb-4 text-xl font-bold text-white">
+              Hình ảnh dự án
+            </h5>
             <div className="grid grid-cols-3 gap-2">
               {NAV_FOOTER_PROJECT.map((item, key) => (
                 <div key={key}>
@@ -70,7 +90,9 @@ const MainFooter = () => {
           </div>
 
           <div>
-            <h5 className="mb-4 text-xl font-bold text-white">Thương hiệu hợp tác</h5>
+            <h5 className="mb-4 text-xl font-bold text-white">
+              Thương hiệu hợp tác
+            </h5>
             <div className="grid grid-cols-3 gap-2">
               {NAV_FOOTER_BRANDS.map((item, key) => (
                 <div key={key}>

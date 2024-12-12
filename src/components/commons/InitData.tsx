@@ -1,23 +1,24 @@
-import { cookies } from 'next/headers';
+import { ReadonlyRequestCookies } from "next/dist/server/web/spec-extension/adapters/request-cookies";
 
-import { isProduction } from '@/utils';
-import { KEY_JWT } from '@/constants/common';
-import { getCurrentUser } from '@/apis/author.api';
-import SetDataToRedux from '@/components/commons/SetDataToRedux';
+import { isProduction } from "@/utils";
+import { KEY_JWT } from "@/constants/common";
+import { getCurrentUser } from "@/apis/author.api";
+import SetDataToRedux from "@/components/commons/SetDataToRedux";
 
-const getDataCurrentUser = async () => {
+const getDataCurrentUser = async (cookie: ReadonlyRequestCookies) => {
   try {
-    const nextCookies = cookies();
-    const token = nextCookies.get(KEY_JWT);
+    const token = cookie.get(KEY_JWT); // Find cookie
+    if (!token) return null;
+
     const data = await getCurrentUser(token?.value);
     return data;
   } catch (error) {
-    if (!isProduction) console.log('ERROR GET CURRENT USER', error);
+    if (!isProduction) console.log("ERROR GET CURRENT USER", error);
   }
 };
 
-const InitData = async () => {
-  const dataCurrentUser = await getDataCurrentUser();
+const InitData = async ({ cookie }: { cookie: ReadonlyRequestCookies }) => {
+  const dataCurrentUser = await getDataCurrentUser(cookie);
   return <SetDataToRedux dataCurrentUser={dataCurrentUser} />;
 };
 

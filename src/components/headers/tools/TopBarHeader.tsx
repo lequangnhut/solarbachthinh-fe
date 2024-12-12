@@ -1,21 +1,31 @@
-import Link from 'next/link';
-import { Clock, Facebook, Instagram, MapPinIcon, Phone, Twitch, Youtube } from 'lucide-react';
-import { getCurrentDate } from '@/utils/getCurrentDate';
+import Link from "next/link";
+import {
+  Clock,
+  Facebook,
+  Instagram,
+  MapPinIcon,
+  Phone,
+  Twitch,
+  Youtube,
+} from "lucide-react";
+import GetCurrentDateTime from "@/components/commons/GetCurrentDateTime";
 
 const TopBarHeader = () => {
-  const currentDate = getCurrentDate();
-
   return (
     <div className="bg-[#1A2A36] p-1">
       <div className="hidden lg:flex">
         <div className="px-5 text-start lg:w-7/12">
           <div className="me-4 inline-flex h-full items-center">
             <MapPinIcon className="me-2 w-4 text-primary" />
-            <small className="text-sm text-gray-400">Núi Sập, Thoại Sơn, An Giang</small>
+            <small className="text-sm text-gray-400">
+              Núi Sập, Thoại Sơn, An Giang
+            </small>
           </div>
           <div className="inline-flex h-full items-center">
             <Clock className="me-2 w-4 text-primary" />
-            <small className="text-sm text-gray-400">{currentDate}</small>
+            <small className="text-sm text-gray-400">
+              <GetCurrentDateTime />
+            </small>
           </div>
         </div>
         <div className="px-5 text-end lg:w-5/12">

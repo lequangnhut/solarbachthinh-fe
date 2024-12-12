@@ -1,5 +1,5 @@
-import { Share2, Trash2 } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
+import { Share2, Trash2 } from "lucide-react";
+import { Button } from "@/components/ui/Button";
 
 const CartProductBtn = () => {
   return (

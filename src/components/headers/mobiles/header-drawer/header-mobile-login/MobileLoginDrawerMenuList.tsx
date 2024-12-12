@@ -1,5 +1,5 @@
-import { MOBILE_NAV_MENU } from '@/constants/menu';
-import MenuHeaderItem from '../MenuHeaderItem';
+import { MOBILE_NAV_MENU } from "@/constants/menu";
+import MenuHeaderItem from "../MenuHeaderItem";
 
 const MobileLoginDrawerMenuList = () => {
   return (

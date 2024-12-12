@@ -1,5 +1,5 @@
-import { useCallback, useMemo } from 'react';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useCallback, useMemo } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 type HookType = [
   pushQueryFunc: (
@@ -46,7 +46,7 @@ export const useQueryCustom = (): HookType => {
         });
       }
       if (isChangedOnly) {
-        window.history.pushState({}, '', `${pathname}?${params.toString()}`);
+        window.history.pushState({}, "", `${pathname}?${params.toString()}`);
       } else {
         replace(`${pathname}?${params.toString()}`, { scroll });
       }

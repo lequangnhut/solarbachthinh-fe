@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import { ChevronRight, Copy, Mail } from 'lucide-react';
-import { setHomeProps } from '@/reduxs/HomeSlice';
-import { useHandleCopy } from '@/hooks/useHandleCopy';
-import { useAppDispatch, useAppSelector } from '@/hooks/store';
+import Link from "next/link";
+import { ChevronRight, Copy, Mail } from "lucide-react";
+import { setHomeProps } from "@/reduxs/HomeSlice";
+import { useHandleCopy } from "@/hooks/useHandleCopy";
+import { useAppDispatch, useAppSelector } from "@/hooks/store";
 
 const MobileLoginDrawerInfo = () => {
   const [handleCopy] = useHandleCopy();
@@ -25,7 +25,10 @@ const MobileLoginDrawerInfo = () => {
         </div>
         <div className="flex items-center gap-1 text-sm">
           <p>UID: {userInfo.id.slice(0, 8)}</p>
-          <span className="cursor-pointer" onClick={() => handleCopy(userInfo.id || '')}>
+          <span
+            className="cursor-pointer"
+            onClick={() => handleCopy(userInfo.id || "")}
+          >
             <Copy width={16} height={16} />
           </span>
         </div>

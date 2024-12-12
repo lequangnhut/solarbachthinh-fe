@@ -1,38 +1,38 @@
-import { Eye, Link2 } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { Eye, Link2 } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const HomeServiceProject = () => {
   const items = [
     {
-      img: '/assets/images/base/img-600x400-6.jpg',
-      category: 'Solar Panels',
-      title: 'We Are pioneers of solar & renewable energy industry',
+      img: "/assets/images/base/img-600x400-6.jpg",
+      category: "Solar Panels",
+      title: "We Are pioneers of solar & renewable energy industry",
     },
     {
-      img: '/assets/images/base/img-600x400-5.jpg',
-      category: 'Wind Turbines',
-      title: 'We Are pioneers of solar & renewable energy industry',
+      img: "/assets/images/base/img-600x400-5.jpg",
+      category: "Wind Turbines",
+      title: "We Are pioneers of solar & renewable energy industry",
     },
     {
-      img: '/assets/images/base/img-600x400-4.jpg',
-      category: 'Hydropower Plants',
-      title: 'We Are pioneers of solar & renewable energy industry',
+      img: "/assets/images/base/img-600x400-4.jpg",
+      category: "Hydropower Plants",
+      title: "We Are pioneers of solar & renewable energy industry",
     },
     {
-      img: '/assets/images/base/img-600x400-3.jpg',
-      category: 'Solar Panels',
-      title: 'We Are pioneers of solar & renewable energy industry',
+      img: "/assets/images/base/img-600x400-3.jpg",
+      category: "Solar Panels",
+      title: "We Are pioneers of solar & renewable energy industry",
     },
     {
-      img: '/assets/images/base/img-600x400-2.jpg',
-      category: 'Wind Turbines',
-      title: 'We Are pioneers of solar & renewable energy industry',
+      img: "/assets/images/base/img-600x400-2.jpg",
+      category: "Wind Turbines",
+      title: "We Are pioneers of solar & renewable energy industry",
     },
     {
-      img: '/assets/images/base/img-600x400-1.jpg',
-      category: 'Hydropower Plants',
-      title: 'We Are pioneers of solar & renewable energy industry',
+      img: "/assets/images/base/img-600x400-1.jpg",
+      category: "Hydropower Plants",
+      title: "We Are pioneers of solar & renewable energy industry",
     },
   ];
 
@@ -40,7 +40,9 @@ const HomeServiceProject = () => {
     <div className="py-10">
       <div className="container mx-auto">
         <div className="animate-fadeInUp mx-auto mb-10 max-w-xl text-center">
-          <h6 className="mb-2 text-lg font-semibold text-primary">Our Projects</h6>
+          <h6 className="mb-2 text-lg font-semibold text-primary">
+            Our Projects
+          </h6>
           <h1 className="text-4xl font-bold text-gray-800">
             Visit Our Latest Solar And Renewable Energy Projects
           </h1>
@@ -48,10 +50,18 @@ const HomeServiceProject = () => {
 
         <div className="animate-fadeInUp mt-5 text-center">
           <ul className="inline-flex flex-wrap justify-center gap-4">
-            <li className="active cursor-pointer text-gray-700 hover:text-primary">All</li>
-            <li className="cursor-pointer text-gray-700 hover:text-primary">Solar Panels</li>
-            <li className="cursor-pointer text-gray-700 hover:text-primary">Wind Turbines</li>
-            <li className="cursor-pointer text-gray-700 hover:text-primary">Hydropower Plants</li>
+            <li className="active cursor-pointer text-gray-700 hover:text-primary">
+              All
+            </li>
+            <li className="cursor-pointer text-gray-700 hover:text-primary">
+              Solar Panels
+            </li>
+            <li className="cursor-pointer text-gray-700 hover:text-primary">
+              Wind Turbines
+            </li>
+            <li className="cursor-pointer text-gray-700 hover:text-primary">
+              Hydropower Plants
+            </li>
           </ul>
         </div>
 
@@ -85,9 +95,13 @@ const HomeServiceProject = () => {
                 </div>
               </div>
               <div className="p-4">
-                <p className="text-sm font-medium text-primary">{item.category}</p>
+                <p className="text-sm font-medium text-primary">
+                  {item.category}
+                </p>
                 <hr className="my-2 w-1/4 border-t-2 border-primary" />
-                <h5 className="text-lg font-semibold text-gray-800">{item.title}</h5>
+                <h5 className="text-lg font-semibold text-gray-800">
+                  {item.title}
+                </h5>
               </div>
             </div>
           ))}

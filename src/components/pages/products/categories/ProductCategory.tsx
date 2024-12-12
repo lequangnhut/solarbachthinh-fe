@@ -1,28 +1,28 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import ProductCategoryInput from './ProductCategoryInput';
+import Link from "next/link";
+import Image from "next/image";
+import ProductCategoryInput from "./ProductCategoryInput";
 
 const ProductCategory = () => {
   const categories = [
     {
-      image: '/assets/images/products/battery.png',
-      name: 'Pin trữ điện',
+      image: "/assets/images/products/battery.png",
+      name: "Pin trữ điện",
     },
     {
-      image: '/assets/images/products/ess.png',
-      name: 'ESS',
+      image: "/assets/images/products/ess.png",
+      name: "ESS",
     },
     {
-      image: '/assets/images/products/inverter.png',
-      name: 'Inverter',
+      image: "/assets/images/products/inverter.png",
+      name: "Inverter",
     },
     {
-      image: '/assets/images/products/light.png',
-      name: 'Đèn năng lượng',
+      image: "/assets/images/products/light.png",
+      name: "Đèn năng lượng",
     },
     {
-      image: '/assets/images/products/pin.png',
-      name: 'Tấm pin',
+      image: "/assets/images/products/pin.png",
+      name: "Tấm pin",
     },
   ];
 
@@ -44,7 +44,9 @@ const ProductCategory = () => {
                     />
                   </Link>
                 </div>
-                <span className="mt-3 text-center text-sm text-gray-500">{item.name}</span>
+                <span className="mt-3 text-center text-sm text-gray-500">
+                  {item.name}
+                </span>
               </li>
             ))}
           </ul>

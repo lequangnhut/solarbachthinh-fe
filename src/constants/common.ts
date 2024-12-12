@@ -1,8 +1,8 @@
-export const KEY_JWT = 'jwt';
+export const KEY_JWT = "jwt";
 export const LIMIT_POST_PAGE = 10;
 export const DEFAULT_PAGE_SIZE = 10;
 
-export const HEADER_CURR_LANG_KEY = 'Current-Lang-Key';
+export const HEADER_CURR_LANG_KEY = "Current-Lang-Key";
 
 export const MEDIA_QUERY = {
   MOBILE: 640,
@@ -12,13 +12,13 @@ export const MEDIA_QUERY = {
 };
 
 export const TOAST_STATUS = {
-  SUCCESS: 'success',
-  ERROR: 'error',
-  INFO: 'info',
-  MESSAGE: 'message',
+  SUCCESS: "success",
+  ERROR: "error",
+  INFO: "info",
+  MESSAGE: "message",
 };
 
 export const INPUT_TYPE = {
-  password: 'password',
-  search: 'search',
+  password: "password",
+  search: "search",
 };

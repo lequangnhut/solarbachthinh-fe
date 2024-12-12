@@ -1,18 +1,20 @@
-'use client';
+"use client";
 
-import { useEffect } from 'react';
-import { Menu } from 'lucide-react';
-import { MEDIA_QUERY } from '@/constants/common';
-import { setHomeProps } from '@/reduxs/HomeSlice';
-import { Drawer, DrawerContent } from '@/components/ui/Drawer';
-import { useAppDispatch, useAppSelector } from '@/hooks/store';
-import MobileHeaderLogin from './header-mobile-login/MobileHeaderLogin';
-import MobileHeaderNotLogin from './header-mobile-not-login/MobileHeaderNotLogin';
+import { useEffect } from "react";
+import { Menu } from "lucide-react";
+import { MEDIA_QUERY } from "@/constants/common";
+import { setHomeProps } from "@/reduxs/HomeSlice";
+import { Drawer, DrawerContent } from "@/components/ui/Drawer";
+import { useAppDispatch, useAppSelector } from "@/hooks/store";
+import MobileHeaderLogin from "./header-mobile-login/MobileHeaderLogin";
+import MobileHeaderNotLogin from "./header-mobile-not-login/MobileHeaderNotLogin";
 
 const MobileHeaderDrawer = () => {
   const dispatch = useAppDispatch();
   const userInfo = useAppSelector((state) => state.user.userInfo);
-  const toggleOpenHeader = useAppSelector((state) => state.home.toggleOpenHeader);
+  const toggleOpenHeader = useAppSelector(
+    (state) => state.home.toggleOpenHeader,
+  );
 
   const onOpenProfile = () => {
     dispatch(setHomeProps({ toggleOpenHeader: true }));
@@ -29,11 +31,11 @@ const MobileHeaderDrawer = () => {
       }
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     handleResize(); // Set initial width
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 

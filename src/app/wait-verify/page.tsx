@@ -1,4 +1,4 @@
-import WaitVerifyPage from '@/components/pages/verify/WaitVerifyPage';
+import WaitVerifyPage from "@/components/pages/verify/WaitVerifyPage";
 
 const WaitVerify = () => {
   return <WaitVerifyPage />;

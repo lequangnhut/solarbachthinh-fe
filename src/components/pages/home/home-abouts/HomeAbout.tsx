@@ -1,12 +1,15 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 
 const HomeAbout = () => {
   return (
     <div className="my-16 overflow-hidden bg-gray-100">
       <div className="mx-auto">
         <div className="flex flex-wrap">
-          <div className="wow fadeIn min-h-[400px] w-full lg:w-1/2" data-wow-delay="0.1s">
+          <div
+            className="wow fadeIn min-h-[400px] w-full lg:w-1/2"
+            data-wow-delay="0.1s"
+          >
             <div className="relative h-full">
               <Image
                 className="absolute inset-0 h-full w-full object-cover"
@@ -18,15 +21,19 @@ const HomeAbout = () => {
             </div>
           </div>
 
-          <div className="wow fadeIn w-full px-6 py-10 lg:w-1/2 lg:px-10" data-wow-delay="0.5s">
+          <div
+            className="wow fadeIn w-full px-6 py-10 lg:w-1/2 lg:px-10"
+            data-wow-delay="0.5s"
+          >
             <div className="lg:pl-10">
               <h6 className="text-lg font-semibold text-primary">About Us</h6>
               <h1 className="mb-4 text-4xl font-bold">
                 25+ Years Experience In Solar & Renewable Energy Industry
               </h1>
               <p className="mb-4 text-gray-600">
-                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet
+                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
+                Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
+                sed stet lorem sit clita duo justo erat amet
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center">

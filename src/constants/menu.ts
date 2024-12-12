@@ -1,34 +1,41 @@
-import { Atom, BatteryCharging, Contact, House, Info, ShoppingBasket } from 'lucide-react';
+import {
+  Atom,
+  BatteryCharging,
+  Contact,
+  House,
+  Info,
+  ShoppingBasket,
+} from "lucide-react";
 
 export const NAV_MENU = [
   {
-    name: 'Trang chủ',
-    link: '/',
+    name: "Trang chủ",
+    link: "/",
     isDropdown: false,
   },
   {
-    name: 'Giới thiệu',
-    link: '/about',
+    name: "Giới thiệu",
+    link: "/about",
     isDropdown: false,
   },
   {
-    name: 'Sản phẩm',
-    link: '/products',
+    name: "Sản phẩm",
+    link: "/products",
     isDropdown: false,
   },
   {
-    name: 'Dự án',
-    link: '/projects',
+    name: "Dự án",
+    link: "/projects",
     isDropdown: false,
   },
   {
-    name: 'Dịch vụ',
-    link: '/services',
+    name: "Dịch vụ",
+    link: "/services",
     isDropdown: false,
   },
   {
-    name: 'Liên hệ',
-    link: '/contact',
+    name: "Liên hệ",
+    link: "/contact",
     isDropdown: false,
   },
 ];
@@ -36,43 +43,43 @@ export const NAV_MENU = [
 export const MOBILE_NAV_MENU = [
   {
     icon: House,
-    title: 'Trang chủ',
-    url: '/',
+    title: "Trang chủ",
+    url: "/",
   },
   {
     icon: Info,
-    title: 'Giới thiệu',
-    url: '/about',
+    title: "Giới thiệu",
+    url: "/about",
   },
   {
     icon: ShoppingBasket,
-    title: 'Sản phẩm',
-    url: '/products',
+    title: "Sản phẩm",
+    url: "/products",
   },
   {
     icon: Atom,
-    title: 'Dự án',
-    url: '/projects',
+    title: "Dự án",
+    url: "/projects",
   },
   {
     icon: BatteryCharging,
-    title: 'Dịch vụ',
-    url: '/services',
+    title: "Dịch vụ",
+    url: "/services",
   },
   {
     icon: Contact,
-    title: 'Liên hệ',
-    url: '/contact',
+    title: "Liên hệ",
+    url: "/contact",
   },
 ];
 
 export const USER_ARRAY_MENU = [
   {
-    title: 'Tổng quan',
-    href: '/',
+    title: "Tổng quan",
+    href: "/",
   },
   {
-    title: 'Lịch sử mua hàng',
-    href: '/',
+    title: "Lịch sử mua hàng",
+    href: "/",
   },
 ];

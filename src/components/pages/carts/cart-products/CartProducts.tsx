@@ -1,13 +1,13 @@
-import { ShoppingCart } from 'lucide-react';
-import CartProductDetail from './CartProductDetail';
+import { ShoppingCart } from "lucide-react";
+import CartProductDetail from "./CartProductDetail";
 
 const CartProducts = () => {
   const products = [
     {
-      image: '/assets/images/products/den-led.png',
+      image: "/assets/images/products/den-led.png",
     },
     {
-      image: '/assets/images/products/den-led.png',
+      image: "/assets/images/products/den-led.png",
     },
   ];
 

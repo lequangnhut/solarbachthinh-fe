@@ -1,5 +1,5 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { IHomeState, IHomeStateForData } from '@/types/home';
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { IHomeState, IHomeStateForData } from "@/types/home";
 
 const initialState: IHomeState = {
   isActiveSlide: 0,
@@ -7,7 +7,7 @@ const initialState: IHomeState = {
 };
 
 const slice = createSlice({
-  name: 'Home Slice',
+  name: "Home Slice",
   initialState,
   reducers: {
     setHomeProps(state, action: PayloadAction<IHomeStateForData>) {

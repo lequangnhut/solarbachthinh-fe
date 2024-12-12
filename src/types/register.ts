@@ -11,12 +11,16 @@ export interface IRegisterState {
   value: IField;
   errorMsg: IField;
   loading: boolean;
+  isResend: boolean;
   isVerifyEmail: boolean;
+  emailWaitVerify: string;
 }
 
 export interface IRegisterStateForData {
   value?: IField;
   errorMsg?: IField;
   loading?: boolean;
+  isResend?: boolean;
   isVerifyEmail?: boolean;
+  emailWaitVerify?: string;
 }

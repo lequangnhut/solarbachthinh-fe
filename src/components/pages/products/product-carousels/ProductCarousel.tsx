@@ -1,5 +1,5 @@
-import ProductCarouselBody from './ProductCarouselBody';
-import ProductCarouselHeader from './ProductCarouselHeader';
+import ProductCarouselBody from "./ProductCarouselBody";
+import ProductCarouselHeader from "./ProductCarouselHeader";
 
 const ProductCarousel = () => {
   return (

@@ -43,7 +43,7 @@
     "nextjs-toploader": "^3.7.15",
     "pino-pretty": "^11.2.2",
     "prettier": "^3.3.2",
-    "prettier-plugin-tailwindcss": "^0.6.5",
+    "prettier-plugin-tailwindcss": "^0.6.9",
     "react": "^18",
     "react-cookie": "^7.1.4",
     "react-day-picker": "^8.7.1",

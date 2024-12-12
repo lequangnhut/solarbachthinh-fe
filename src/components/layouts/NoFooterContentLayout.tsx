@@ -1,4 +1,4 @@
-import MainHeader from '../headers/MainHeader';
+import MainHeader from "../headers/MainHeader";
 
 const NoFooterContentLayout = ({ children }: { children: React.ReactNode }) => {
   return (

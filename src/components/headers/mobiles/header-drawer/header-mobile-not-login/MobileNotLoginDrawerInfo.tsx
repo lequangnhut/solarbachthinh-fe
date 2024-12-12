@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import { useAppDispatch } from '@/hooks/store';
-import { setHomeProps } from '@/reduxs/HomeSlice';
+import Link from "next/link";
+import { useAppDispatch } from "@/hooks/store";
+import { setHomeProps } from "@/reduxs/HomeSlice";
 
 const MobileNotLoginDrawerInfo = () => {
   const dispatch = useAppDispatch();

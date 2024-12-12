@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { CircleCheck, CircleX, Info, MessageSquare } from 'lucide-react';
+import { CircleCheck, CircleX, Info, MessageSquare } from "lucide-react";
 
 import {
   Toast,
@@ -9,10 +9,10 @@ import {
   ToastProvider,
   ToastTitle,
   ToastViewport,
-} from '@/components/ui/Toast';
-import { useToast } from '@/components/ui/use-toast';
-import { cn } from '@/utils';
-import { TOAST_STATUS } from '@/constants/common';
+} from "@/components/ui/Toast";
+import { useToast } from "@/components/ui/use-toast";
+import { cn } from "@/utils";
+import { TOAST_STATUS } from "@/constants/common";
 
 const TOAST_DURATION = 2000;
 
@@ -21,44 +21,58 @@ export function Toaster() {
 
   return (
     <ToastProvider duration={TOAST_DURATION}>
-      {toasts.map(({ id, title, description, action, status, isHideCloseToast, ...props }) => {
-        const iconMap = {
-          success: <CircleCheck width={28} height={28} className="text-green-500" />,
-          error: <CircleX width={28} height={28} className="text-red-500" />,
-          info: <Info width={28} height={28} className="text-blue-500" />,
-          message: (
-            <div className="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-[#232527]">
-              <MessageSquare width={20} height={20} className="text-white" />
-            </div>
-          ),
-        };
-        const icon = iconMap[status ?? 'info'];
+      {toasts.map(
+        ({
+          id,
+          title,
+          description,
+          action,
+          status,
+          isHideCloseToast,
+          ...props
+        }) => {
+          const iconMap = {
+            success: (
+              <CircleCheck width={28} height={28} className="text-green-500" />
+            ),
+            error: <CircleX width={28} height={28} className="text-red-500" />,
+            info: <Info width={28} height={28} className="text-blue-500" />,
+            message: (
+              <div className="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-[#232527]">
+                <MessageSquare width={20} height={20} className="text-white" />
+              </div>
+            ),
+          };
+          const icon = iconMap[status ?? "info"];
 
-        return (
-          <Toast key={id} {...props}>
-            <div className="grid gap-1">
-              {title && <ToastTitle>{title}</ToastTitle>}
-              {description && (
-                <ToastDescription>
-                  <div
-                    className={cn(
-                      status === TOAST_STATUS.MESSAGE ? 'gap-6' : 'gap-2',
-                      'flex w-full items-center',
-                    )}
-                  >
-                    <div className="w-7">{icon}</div>
-                    <p className="w-full text-base font-semibold">{description}</p>
-                  </div>
-                </ToastDescription>
+          return (
+            <Toast key={id} {...props}>
+              <div className="grid gap-1">
+                {title && <ToastTitle>{title}</ToastTitle>}
+                {description && (
+                  <ToastDescription>
+                    <div
+                      className={cn(
+                        status === TOAST_STATUS.MESSAGE ? "gap-6" : "gap-2",
+                        "flex w-full items-center",
+                      )}
+                    >
+                      <div className="w-7">{icon}</div>
+                      <p className="w-full text-base font-semibold">
+                        {description}
+                      </p>
+                    </div>
+                  </ToastDescription>
+                )}
+              </div>
+              {action}
+              {!isHideCloseToast && (
+                <ToastClose className="text-white/50 opacity-100 hover:text-white" />
               )}
-            </div>
-            {action}
-            {!isHideCloseToast && (
-              <ToastClose className="text-white/50 opacity-100 hover:text-white" />
-            )}
-          </Toast>
-        );
-      })}
+            </Toast>
+          );
+        },
+      )}
       <ToastViewport />
     </ToastProvider>
   );

@@ -1,20 +1,20 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { IErrorLoginState, IErrorLoginStateForData } from '@/types/login';
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { IErrorLoginState, IErrorLoginStateForData } from "@/types/login";
 
 const initialState: IErrorLoginState = {
   value: {
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   },
   errorMsg: {
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   },
   loading: false,
 };
 
 const slice = createSlice({
-  name: 'Login Slice',
+  name: "Login Slice",
   initialState,
   reducers: {
     setLoginProps(state, action: PayloadAction<IErrorLoginStateForData>) {

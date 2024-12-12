@@ -1,7 +1,7 @@
-import { cn } from '@/utils';
-import { Input } from '@/components/ui/Input';
-import { FormControl, FormItem } from '@/components/ui/Form';
-import { Textarea } from '@/components/ui/Textarea';
+import { cn } from "@/utils";
+import { Input } from "@/components/ui/Input";
+import { FormControl, FormItem } from "@/components/ui/Form";
+import { Textarea } from "@/components/ui/Textarea";
 
 const ContactFormItem = () => {
   return (
@@ -13,7 +13,7 @@ const ContactFormItem = () => {
             type="text"
             placeholder="Họ và tên"
             className={cn(
-              'rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
+              "rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0",
             )}
             autoComplete="off"
           />
@@ -26,7 +26,7 @@ const ContactFormItem = () => {
             type="text"
             placeholder="Công ty"
             className={cn(
-              'rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
+              "rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0",
             )}
             autoComplete="off"
           />
@@ -39,7 +39,7 @@ const ContactFormItem = () => {
             type="text"
             placeholder="Địa chỉ"
             className={cn(
-              'rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
+              "rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0",
             )}
             autoComplete="off"
           />
@@ -52,7 +52,7 @@ const ContactFormItem = () => {
             type="email"
             placeholder="Email"
             className={cn(
-              'rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
+              "rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0",
             )}
             autoComplete="off"
           />
@@ -65,7 +65,7 @@ const ContactFormItem = () => {
             type="text"
             placeholder="Số điện thoại"
             className={cn(
-              'rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0',
+              "rounded-lg border !border-[#e5e7eb] !py-[22px] focus:ring-0 focus-visible:!ring-0 focus-visible:ring-offset-0",
             )}
             autoComplete="off"
           />

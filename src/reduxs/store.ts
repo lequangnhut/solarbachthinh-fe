@@ -7,24 +7,26 @@ import {
   PURGE,
   REGISTER,
   persistStore,
-} from 'redux-persist';
-import storage from '@/utils/storage';
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import RegisterSlice from './RegisterSlice';
-import LoginSlice from './LoginSlice';
-import UserSlice from './UserSlice';
-import HomeSlice from './HomeSlice';
+} from "redux-persist";
+import storage from "@/utils/storage";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import RegisterSlice from "./RegisterSlice";
+import LoginSlice from "./LoginSlice";
+import UserSlice from "./UserSlice";
+import HomeSlice from "./HomeSlice";
+import ForgotPasswordSlice from "./ForgotPasswordSlice";
 
 const persistConfig = {
-  key: 'root',
+  key: "root",
   storage,
-  whitelist: [''],
+  whitelist: [""],
 };
 const rootReducer = combineReducers({
   register: RegisterSlice,
   login: LoginSlice,
   user: UserSlice,
   home: HomeSlice,
+  forgotPassword: ForgotPasswordSlice,
 });
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 

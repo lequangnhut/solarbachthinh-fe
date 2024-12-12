@@ -1,5 +1,5 @@
-import CustomComingSoon from '@/components/commons/CustomComingSoon';
-import NoFooterContentLayout from '@/components/layouts/NoFooterContentLayout';
+import CustomComingSoon from "@/components/commons/CustomComingSoon";
+import NoFooterContentLayout from "@/components/layouts/NoFooterContentLayout";
 
 export default function ServicePage() {
   return (

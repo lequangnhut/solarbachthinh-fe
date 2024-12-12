@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import CartProductQuantity from './CartProductQuantity';
-import CartProductInformation from './CartProductInformation';
+import Image from "next/image";
+import CartProductQuantity from "./CartProductQuantity";
+import CartProductInformation from "./CartProductInformation";
 
 interface IProps {
   image: string;

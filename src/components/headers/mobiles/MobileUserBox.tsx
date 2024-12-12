@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { NAV_MENU } from '@/constants/menu';
+import Link from "next/link";
+import { NAV_MENU } from "@/constants/menu";
 
 const MobileUserBox = () => {
   return (

@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { isProduction } from '@/utils';
-import { toast } from '@/components/ui/use-toast';
+import { useState } from "react";
+import { isProduction } from "@/utils";
+import { toast } from "@/components/ui/use-toast";
 
 export const useHandleCopy = (): [(text: string) => void, boolean] => {
   const [isCopied, setIsCopied] = useState(false);
@@ -14,29 +14,30 @@ export const useHandleCopy = (): [(text: string) => void, boolean] => {
         .then(() => {
           setIsCopied(true);
           toast({
-            status: 'success',
+            status: "success",
             duration: 2000,
-            description: 'Sao chép thành công',
+            description: "Sao chép thành công",
           });
         })
         .catch((error) => {
-          if (!isProduction) console.error('Lỗi khi sao chép vào clipboard:', error);
+          if (!isProduction)
+            console.error("Lỗi khi sao chép vào clipboard:", error);
           toast({
-            title: 'Lỗi',
-            variant: 'destructive',
+            title: "Lỗi",
+            variant: "destructive",
             duration: 2000,
-            description: 'Sao chép thất bại',
+            description: "Sao chép thất bại",
           });
         })
         .finally(() => {
           setIsCopied(false);
         });
     } else {
-      if (!isProduction) console.warn('Trình duyệt không hỗ trợ Clipboard API');
+      if (!isProduction) console.warn("Trình duyệt không hỗ trợ Clipboard API");
       toast({
-        title: 'Cảnh báo',
+        title: "Cảnh báo",
         duration: 2000,
-        description: 'Trình duyệt của bạn không hỗ trợ sao chép',
+        description: "Trình duyệt của bạn không hỗ trợ sao chép",
       });
     }
   };

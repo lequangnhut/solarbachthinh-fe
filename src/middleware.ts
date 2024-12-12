@@ -1,11 +1,17 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from "next/server";
 
-import { ACCESS_TOKEN } from '@/utils/storage';
-import { checkTokenExpired, decrypt } from '@/utils/auth';
+import { ACCESS_TOKEN } from "@/utils/storage";
+import { checkTokenExpired, decrypt } from "@/utils/auth";
 
-const protectedRoutes = ['/personal'];
+const protectedRoutes = ["/carts"];
 
-const publicRoutes = ['/register', '/login', '/verify', '/wait-verify'];
+const publicRoutes = [
+  "/register",
+  "/login",
+  "/forgot-password",
+  "/verify",
+  "/wait-verify",
+];
 
 export async function middleware(req: NextRequest) {
   const pathName = req.nextUrl.pathname;
@@ -14,9 +20,13 @@ export async function middleware(req: NextRequest) {
   const cookie = req.cookies.get(ACCESS_TOKEN)?.value;
   const token = await decrypt(cookie);
   const isTokenExpired = checkTokenExpired(token);
-  const isProtectedRoute = protectedRoutes.some((route) => pathName.startsWith(route));
+  const isProtectedRoute = protectedRoutes.some((route) =>
+    pathName.startsWith(route),
+  );
 
-  const isPublicRoute = publicRoutes.some((route) => pathName.startsWith(route));
+  const isPublicRoute = publicRoutes.some((route) =>
+    pathName.startsWith(route),
+  );
 
   const isRedirectLogin = isProtectedRoute && (!token?.id || isTokenExpired);
   const isRedirectHome = isPublicRoute && token?.id;

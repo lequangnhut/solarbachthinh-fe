@@ -1,7 +1,7 @@
-import { Minus, Plus } from 'lucide-react';
-import { Input } from '@/components/ui/Input';
-import { Button } from '@/components/ui/Button';
-import { FormControl } from '@/components/ui/Form';
+import { Minus, Plus } from "lucide-react";
+import { Input } from "@/components/ui/Input";
+import { Button } from "@/components/ui/Button";
+import { FormControl } from "@/components/ui/Form";
 
 const CartProductQuantity = () => {
   return (

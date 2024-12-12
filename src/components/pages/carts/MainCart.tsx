@@ -1,5 +1,5 @@
-import CartDetail from './cart-detail/CartDetail';
-import CartProducts from './cart-products/CartProducts';
+import CartDetail from "./cart-detail/CartDetail";
+import CartProducts from "./cart-products/CartProducts";
 
 const MainCart = () => {
   return (

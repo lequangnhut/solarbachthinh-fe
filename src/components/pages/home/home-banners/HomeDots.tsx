@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { cn } from '@/utils';
-import { setHomeProps } from '@/reduxs/HomeSlice';
-import { useAppDispatch, useAppSelector } from '@/hooks/store';
+import Image from "next/image";
+import { cn } from "@/utils";
+import { setHomeProps } from "@/reduxs/HomeSlice";
+import { useAppDispatch, useAppSelector } from "@/hooks/store";
 
 const HomeDots = () => {
   const dispatch = useAppDispatch();
@@ -11,22 +11,22 @@ const HomeDots = () => {
 
   const slides = [
     {
-      src: '/assets/images/base/carousel-1.jpg',
-      title: 'Pioneers Of Solar And Renewable Energy',
+      src: "/assets/images/base/carousel-1.jpg",
+      title: "Pioneers Of Solar And Renewable Energy",
       description:
-        'Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.',
+        "Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.",
     },
     {
-      src: '/assets/images/base/carousel-2.jpg',
-      title: 'Innovations in Renewable Energy',
+      src: "/assets/images/base/carousel-2.jpg",
+      title: "Innovations in Renewable Energy",
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
-      src: '/assets/images/base/carousel-3.jpg',
-      title: 'Towards a Sustainable Future',
+      src: "/assets/images/base/carousel-3.jpg",
+      title: "Towards a Sustainable Future",
       description:
-        'Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        "Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
   ];
 
@@ -40,8 +40,10 @@ const HomeDots = () => {
         <div
           key={index}
           className={cn(
-            'relative cursor-pointer rounded-full',
-            isActiveSlide === index ? 'border-4 border-green-500' : 'border-2 border-gray-300',
+            "relative cursor-pointer rounded-full",
+            isActiveSlide === index
+              ? "border-4 border-green-500"
+              : "border-2 border-gray-300",
           )}
           onClick={() => handleDotClick(index)}
         >
@@ -51,8 +53,8 @@ const HomeDots = () => {
             width={60}
             height={60}
             className={cn(
-              'h-12 w-12 rounded-full border-2 border-solid border-white object-cover shadow-lg transition-transform duration-300',
-              isActiveSlide === index ? 'scale-125' : 'scale-100',
+              "h-12 w-12 rounded-full border-2 border-solid border-white object-cover shadow-lg transition-transform duration-300",
+              isActiveSlide === index ? "scale-125" : "scale-100",
             )}
           />
           {isActiveSlide === index && (

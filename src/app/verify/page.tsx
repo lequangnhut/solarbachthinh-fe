@@ -1,5 +1,7 @@
-import VerifyPage from '@/components/pages/verify/VerifyPage';
+import VerifyPage from "@/components/pages/verify/VerifyPage";
 
-export default function Verify() {
+const Verify = () => {
   return <VerifyPage />;
-}
+};
+
+export default Verify;

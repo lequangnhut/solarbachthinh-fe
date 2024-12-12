@@ -1,5 +1,5 @@
-import ContactForm from './ContactForm';
-import ContactAddress from './ContactAddress';
+import ContactForm from "./ContactForm";
+import ContactAddress from "./ContactAddress";
 
 const MainContact = () => {
   return (

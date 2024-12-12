@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 interface IProps {
   image: string;
@@ -21,7 +21,9 @@ const ProjectItem = ({ image, content }: IProps) => {
       </div>
       <div className="p-6">
         <Link href="">
-          <h3 className="text-sm font-semibold text-black md:text-base">{content}</h3>
+          <h3 className="text-sm font-semibold text-black md:text-base">
+            {content}
+          </h3>
         </Link>
 
         <div className="mt-3 text-sm md:text-base">
