@@ -8,6 +8,7 @@ export interface IUserInfo {
   districtCode: string;
   wardCode: string;
   address: string;
+  createdAt: string;
 }
 
 export interface IUserState {

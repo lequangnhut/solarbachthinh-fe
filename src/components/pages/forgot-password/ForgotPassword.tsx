@@ -11,8 +11,8 @@ const ForgotPassword = () => {
         </h1>
         <div className="mb-6 flex w-full items-center gap-2 bg-[#fff7e8] px-3 py-2 text-sm text-[#fa8c16]">
           <CircleAlert color="#fff" size={28} fill="#fa8c16" />
-          Quý khách vui lòng không chia sẽ mật khẩu được gửi từ
-          solarbachthinh@gmail.com cho bất kì ai.
+          Quý khách vui lòng không chia sẽ mật khẩu được gửi từ hệ thống cho bất
+          kì ai.
         </div>
 
         <ForgotPasswordForm />

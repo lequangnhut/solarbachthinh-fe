@@ -37,7 +37,7 @@ const UserToolBox = () => {
     currUser && (
       <div className="hidden gap-4 lg:flex">
         <HoverCard openDelay={300}>
-          <Link href="/">
+          <Link href="/account-overview">
             <HoverCardTrigger>
               <User
                 width={22}

@@ -1,4 +1,4 @@
-import MainContentLayout from "@/components/layouts/MainContentLayout";
+import NoFooterContentLayout from "@/components/layouts/NoFooterContentLayout";
 
 export default function CartLayout({
   children,
@@ -6,8 +6,8 @@ export default function CartLayout({
   children: React.ReactNode;
 }) {
   return (
-    <MainContentLayout>
+    <NoFooterContentLayout>
       <main className="min-h-screen">{children}</main>
-    </MainContentLayout>
+    </NoFooterContentLayout>
   );
 }

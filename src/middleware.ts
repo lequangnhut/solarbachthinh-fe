@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { ACCESS_TOKEN } from "@/utils/storage";
 import { checkTokenExpired, decrypt } from "@/utils/auth";
 
-const protectedRoutes = ["/carts"];
+const protectedRoutes = ["/carts", "/account-overview"];
 
 const publicRoutes = [
   "/register",

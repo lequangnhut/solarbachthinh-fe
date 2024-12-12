@@ -35,10 +35,10 @@ const MobileLoginDrawerInfo = () => {
       </div>
       <Link
         onClick={toggleProfile}
-        href="/"
+        href="/account-overview"
         className="flex items-center gap-1 text-sm text-primary"
       >
-        <p>Chi tiết</p>
+        <p>Tổng quan</p>
         <ChevronRight />
       </Link>
     </div>

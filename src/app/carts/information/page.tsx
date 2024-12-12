@@ -1,10 +1,10 @@
-import PageHeaderLayout from "@/components/commons/headers/PageHeaderLayout";
+import CustomComingSoon from "@/components/commons/CustomComingSoon";
 
 const InformationPage = async () => {
   return (
-    <PageHeaderLayout pageTitle="Thông tin đơn hàng">
-      <div></div>
-    </PageHeaderLayout>
+    <div className="flex h-[90vh] w-full items-center justify-center">
+      <CustomComingSoon />
+    </div>
   );
 };
 

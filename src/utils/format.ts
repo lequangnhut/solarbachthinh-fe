@@ -23,6 +23,29 @@ export const formatPhoneNumber = (
     : phoneNumber;
 };
 
+export const formatTrxId = (trxId: string) => {
+  return `${trxId?.slice(0, 10)}...${trxId?.slice(
+    trxId.length - 10,
+    trxId.length,
+  )}`;
+};
+
+// format phone number
+export const formatVietnamPhoneNumber = (phoneNumber: string) => {
+  phoneNumber = phoneNumber.replace(/[\s\-().]/g, "");
+  if (phoneNumber === "") return "";
+
+  if (phoneNumber.startsWith("0")) {
+    phoneNumber = phoneNumber.slice(1);
+  }
+
+  if (!phoneNumber.startsWith("+84")) {
+    phoneNumber = "+84" + phoneNumber;
+  }
+
+  return phoneNumber;
+};
+
 export const formatHiddenEmail = (email: string) => {
   email = email.trim();
   if (email === "") return "";

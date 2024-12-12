@@ -4,6 +4,7 @@ import {
   Contact,
   House,
   Info,
+  ShieldCheck,
   ShoppingBasket,
 } from "lucide-react";
 
@@ -71,12 +72,17 @@ export const MOBILE_NAV_MENU = [
     title: "Liên hệ",
     url: "/contact",
   },
+  {
+    icon: ShieldCheck,
+    title: "Bảo mật",
+    url: "/account-overview/security",
+  },
 ];
 
 export const USER_ARRAY_MENU = [
   {
     title: "Tổng quan",
-    href: "/",
+    href: "/account-overview",
   },
   {
     title: "Lịch sử mua hàng",
