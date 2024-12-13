@@ -104,7 +104,7 @@ const ForgotPasswordForm = () => {
   };
 
   return (
-    <form className="mb-1 space-y-8" onSubmit={handleSubmit}>
+    <form className="mb-4 space-y-8" onSubmit={handleSubmit}>
       <FormItem className="!mt-4">
         <FormLabel
           className={cn("text-gray-600", errorMsg.email && "text-red-500")}

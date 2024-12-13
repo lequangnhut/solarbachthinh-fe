@@ -16,6 +16,7 @@ import UserSlice from "./UserSlice";
 import HomeSlice from "./HomeSlice";
 import ForgotPasswordSlice from "./ForgotPasswordSlice";
 import AccountOverviewSlice from "./AccountOverviewSlice";
+import ProductsSlice from "./ProductsSlice";
 
 const persistConfig = {
   key: "root",
@@ -29,6 +30,7 @@ const rootReducer = combineReducers({
   home: HomeSlice,
   forgotPassword: ForgotPasswordSlice,
   accountOverview: AccountOverviewSlice,
+  products: ProductsSlice,
 });
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
