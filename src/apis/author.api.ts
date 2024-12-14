@@ -1,5 +1,18 @@
-import restConnector from "@/connectors/AxiosRestConnector";
+import { AxiosResponse } from "axios";
 import { isProduction } from "@/utils";
+import restConnector from "@/connectors/AxiosRestConnector";
+
+export const getShortLivedJwt = async (): Promise<
+  AxiosResponse<{
+    access_token: string;
+    data: {
+      id: string;
+    };
+  }>
+> => {
+  const { data } = await restConnector().post("/auth/temp");
+  return data;
+};
 
 export const register = async (values: {
   email: string;

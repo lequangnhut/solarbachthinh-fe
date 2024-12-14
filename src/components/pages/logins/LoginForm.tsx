@@ -24,6 +24,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/Form";
+import Image from "next/image";
 
 const LoginForm = () => {
   const { toast } = useToast();
@@ -204,6 +205,20 @@ const LoginForm = () => {
           >
             Đăng nhập
           </Button>
+
+          <div className="flex items-center justify-center">
+            <Button type="button" className="h-9">
+              <div className="h-8 w-8">
+                <Image
+                  src="/assets/icons/logo-google.svg"
+                  alt="logo-google"
+                  width={100}
+                  height={100}
+                />
+              </div>
+              <div className="">Google</div>
+            </Button>
+          </div>
 
           <p className="mt-4 text-center text-xs">
             Bạn chưa có tài khoản?&nbsp;

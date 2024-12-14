@@ -17,23 +17,23 @@ const ContactAddressItem = (item: IProps) => {
       </h1>
       <div className="space-y-6 text-base md:mr-20">
         <p>
-          <strong>Địa chỉ:</strong>
+          <strong>Địa chỉ:&nbsp;</strong>
           {item.address}
         </p>
         <p>
-          <strong>Điện thoại:</strong>
+          <strong>Điện thoại:&nbsp;</strong>
           {item.phoneNumber}
         </p>
         <p>
-          <strong>Hotline:</strong>
+          <strong>Hotline:&nbsp;</strong>
           {item.hotline}
         </p>
         <p>
-          <strong>Fax:</strong>
+          <strong>Fax:&nbsp;</strong>
           {item.fax}
         </p>
         <p>
-          <strong>Email:</strong>{" "}
+          <strong>Email:&nbsp;</strong>{" "}
           <Link className="text-blue-500" href={item.email}>
             {item.email}
           </Link>

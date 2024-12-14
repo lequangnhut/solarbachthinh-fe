@@ -1,46 +1,19 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { PulseLoader } from "react-spinners";
-import { useToast } from "@/components/ui/use-toast";
 import { setProductProps } from "@/reduxs/ProductsSlice";
-import { getCategoriesList } from "@/apis/categories.api";
 import { useAppDispatch, useAppSelector } from "@/hooks/store";
 import ProductCategoryInput from "./ProductCategoryInput";
 
 const ProductCategory = () => {
-  const { toast } = useToast();
   const dispatch = useAppDispatch();
-  const [loading, setLoading] = useState<boolean>(true);
   const categoriesList = useAppSelector(
     (state) => state.products.categoriesList,
   );
-
-  const handleGetCategoriesList = async () => {
-    setLoading(true);
-    try {
-      const res = await getCategoriesList();
-      if (res) {
-        dispatch(
-          setProductProps({
-            categoriesList: res,
-          }),
-        );
-      }
-      setLoading(false);
-    } catch (error) {
-      toast({
-        description: "Không thể tải danh sách loại sản phẩm",
-        status: "error",
-      });
-    }
-    setLoading(false);
-  };
+  const loading = useAppSelector((state) => state.products.loading);
 
   useEffect(() => {
-    handleGetCategoriesList();
     return () => {
       dispatch(
         setProductProps({

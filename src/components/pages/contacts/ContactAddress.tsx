@@ -5,7 +5,7 @@ const ContactAddress = () => {
     {
       headquarters: "Trụ sở chính",
       address:
-        "Đối diện nhà văn hóa thiếu nhi, ấp Bắc Sơn, thị trấn Núi Sập, huyện Thoại Sơn, tỉnh An Giang",
+        "Đối diện nhà thiếu nhi, ấp Bắc Sơn, thị trấn Núi Sập, huyện Thoại Sơn, tỉnh An Giang",
       phoneNumber: "(+84) 918 619 651",
       hotline: "0918 619 651",
       fax: "(+84) 918 619 651",
